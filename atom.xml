@@ -6,7 +6,7 @@
   <link href="https://www.ruusu.cn/atom.xml" rel="self"/>
   
   <link href="https://www.ruusu.cn/"/>
-  <updated>2024-03-14T08:56:32.650Z</updated>
+  <updated>2024-03-11T09:33:22.157Z</updated>
   <id>https://www.ruusu.cn/</id>
   
   <author>
@@ -15,27 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>计算机网络技术</title>
-    <link href="https://www.ruusu.cn/2024/03/14/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/"/>
-    <id>https://www.ruusu.cn/2024/03/14/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/</id>
-    <published>2024-03-14T08:53:24.000Z</published>
-    <updated>2024-03-14T08:56:32.650Z</updated>
-    
-    <content type="html"><![CDATA[<p>计算机网络的定义：计算机网络是通过通信设备和通信线路，按照相同的通信协议，将分布在不同地理位置且功能独立的多个计算机系统相互连接，在网络操作系统的管理和控制下，实现资源共享和高速通信的系统。</p><p>计算机网络构成4要素：<br>(1)两台或两台以上功能独立的计算机相互连接，以达到相互通信的目的。<br>(2)计算机之间要用通信设备和传输介质连接起来。<br>(3)计算机之间通信要遵守相同的网络通信协议<br>(4)计算机需具备网络软件、硬件资源管理功能，以达到资源共享的目的。</p><p>计算机网络按逻辑功能可分为资源子网和通信子网两部分</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;计算机网络的定义：计算机网络是通过通信设备和通信线路，按照相同的通信协议，将分布在不同地理位置且功能独立的多个计算机系统相互连接，在网络操作系统的管理和控制下，实现资源共享和高速通信的系统。&lt;/p&gt;
-&lt;p&gt;计算机网络构成4要素：&lt;br&gt;(1)两台或两台以上功能独立的计算机相</summary>
-      
-    
-    
-    
-    
-  </entry>
   
   <entry>
     <title>Hello World</title>
