@@ -6,7 +6,7 @@
   <link href="https://www.ruusu.cn/atom.xml" rel="self"/>
   
   <link href="https://www.ruusu.cn/"/>
-  <updated>2024-03-11T09:33:22.157Z</updated>
+  <updated>2024-03-15T03:05:32.669Z</updated>
   <id>https://www.ruusu.cn/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>1-计算机网络概述</title>
+    <link href="https://www.ruusu.cn/2024/03/15/1-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0/"/>
+    <id>https://www.ruusu.cn/2024/03/15/1-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0/</id>
+    <published>2024-03-15T02:57:48.000Z</published>
+    <updated>2024-03-15T03:05:32.669Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="计算机网络概述"><a href="#计算机网络概述" class="headerlink" title="计算机网络概述"></a>计算机网络概述</h1><h2 id="计算机网络的定义"><a href="#计算机网络的定义" class="headerlink" title="计算机网络的定义"></a>计算机网络的定义</h2><p>计算机网络是通过<mark>通信设备</mark>和<mark>通信线路</mark>，按照相同的<mark>通信协议</mark>，将分布在不同地理位置且功能独立的<mark>多个计算机系统</mark>相互连接，在<mark>网络操作系统</mark>的管理和控制下，实现<mark>资源共享</mark>和<mark>高速通信</mark>的系统。</p><h2 id="计算机网络的组成"><a href="#计算机网络的组成" class="headerlink" title="计算机网络的组成"></a>计算机网络的组成</h2><p><mark>按逻辑功能可分为资源子网和通信子网两部分</mark> (资源子网是计算机网络中面向用户的部分，负责数据处理工具。通信子网是网络中的数据通信系统，用于信息交换的网络节点处理器和通信链路组成，主要负责通信处理工作)</p><p>若只访问本地计算机可在资源子网内部进行，如要访问异地计算机，则要通过通信子网。</p><p><mark>按网络结构可分为网络硬件和网络软件两部分</mark></p><h2 id="计算机网络的分类"><a href="#计算机网络的分类" class="headerlink" title="计算机网络的分类"></a>计算机网络的分类</h2><p>按网络的作用范围划分：<mark>局域网、城域网和广域网</mark> 差异主要存在于覆盖范围和传输速率</p><p>按网络的传输方式划分：<mark>点对点传输方式</mark> <mark>广播传输方式</mark></p><p>按通信介质划分：<mark>有线网</mark> <mark>无线网</mark></p><p>按网络的使用范围划分：<mark>公用网</mark> <mark>专用网</mark></p><p>按网络控制方式划分：<mark>集中式计算机网络</mark> <mark>分布式计算机网络</mark></p><p>按拓扑结构划分：<mark>总线型星型环形树形复合型网状</mark></p><h2 id="计算机网络的拓扑结构"><a href="#计算机网络的拓扑结构" class="headerlink" title="计算机网络的拓扑结构"></a>计算机网络的拓扑结构</h2><p>总线型拓扑结构：<mark>结构简单，易于扩充，但网络中节点多时，传输速率会减小。</mark>(很少采用)</p><p>星形结构：<mark>结构接单、易于实现、维护容易。</mark> <mark>以中心节点进行通信</mark></p><p>环形结构：<mark>路劲选择简单、传输延迟确定，但增减节点较复杂、单环传输不可靠。</mark></p><p>树形结构：<mark>是星形结构的一种扩展，适用于分级管理和控制的网络系统</mark></p><p>网状结构：<mark>可充分、合理地使用网络资源传输数据，并且具有很高的可靠性，但这种可靠性是以高投资和高复杂度的管理为代价的。</mark></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;计算机网络概述&quot;&gt;&lt;a href=&quot;#计算机网络概述&quot; class=&quot;headerlink&quot; title=&quot;计算机网络概述&quot;&gt;&lt;/a&gt;计算机网络概述&lt;/h1&gt;&lt;h2 id=&quot;计算机网络的定义&quot;&gt;&lt;a href=&quot;#计算机网络的定义&quot; class=&quot;headerli</summary>
+      
+    
+    
+    
+    
+    <category term="网工学习" scheme="https://www.ruusu.cn/tags/%E7%BD%91%E5%B7%A5%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
