@@ -6,7 +6,7 @@
   <link href="https://www.ruusu.cn/atom.xml" rel="self"/>
   
   <link href="https://www.ruusu.cn/"/>
-  <updated>2024-03-15T03:37:28.671Z</updated>
+  <updated>2024-03-15T08:30:46.222Z</updated>
   <id>https://www.ruusu.cn/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="https://www.ruusu.cn/2024/03/15/IP%E5%9C%B0%E5%9D%80%E7%9A%84%E5%88%86%E7%B1%BB%E5%92%8C%E7%BB%84%E6%88%90/"/>
+    <id>https://www.ruusu.cn/2024/03/15/IP%E5%9C%B0%E5%9D%80%E7%9A%84%E5%88%86%E7%B1%BB%E5%92%8C%E7%BB%84%E6%88%90/</id>
+    <published>2024-03-15T08:30:46.221Z</published>
+    <updated>2024-03-15T08:30:46.222Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="IP地址的分类和组成"><a href="#IP地址的分类和组成" class="headerlink" title="IP地址的分类和组成"></a>IP地址的分类和组成</h2><p>IP地址由网络号(ID)和主机号(ID)组成</p><p>（1）A类地址：最高位是0，随后的7位是网络地址，最后24位是主机地址。<br>（2）B类地址：最高2位分别是1和0，随后的14位是网络地址，最后16位是主机地址。<br>（3）C类地址：最高的3位是110，随后的21位是网络地址，最后8位是主机地址。<br>（4）D类地址：最高的4位是1110，随后的所有位用来做组播地址。<br>（5）E类地址：最高的5位是11110，这类地址为保留地址，不使用。</p><table><thead><tr><th align="center">类别</th><th align="center">第一个字节的格式</th><th align="center">网络数</th><th align="center">每个网络容纳的主机数</th><th align="center">分辨方法(首字节范围)</th></tr></thead><tbody><tr><td align="center">A</td><td align="center">0xxxxxxx</td><td align="center">126</td><td align="center">16777214</td><td align="center">1~126</td></tr><tr><td align="center">B</td><td align="center">10xxxxxx</td><td align="center">16384</td><td align="center">65534</td><td align="center">128~191</td></tr><tr><td align="center">C</td><td align="center">110xxxxx</td><td align="center">2097152</td><td align="center">254</td><td align="center">192~223</td></tr></tbody></table>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;IP地址的分类和组成&quot;&gt;&lt;a href=&quot;#IP地址的分类和组成&quot; class=&quot;headerlink&quot; title=&quot;IP地址的分类和组成&quot;&gt;&lt;/a&gt;IP地址的分类和组成&lt;/h2&gt;&lt;p&gt;IP地址由网络号(ID)和主机号(ID)组成&lt;/p&gt;
+&lt;p&gt;（1）A类地址：</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>1-计算机网络概述</title>
@@ -65,15 +86,39 @@
     <link href="https://www.ruusu.cn/2024/03/15/3-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/"/>
     <id>https://www.ruusu.cn/2024/03/15/3-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/</id>
     <published>2024-03-15T02:57:48.000Z</published>
-    <updated>2024-03-15T07:05:26.613Z</updated>
+    <updated>2024-03-15T08:59:48.603Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="常见的标准化组织和机构"><a href="#常见的标准化组织和机构" class="headerlink" title="常见的标准化组织和机构"></a>常见的标准化组织和机构</h2><p>1.国际标准化组织(ISO)</p><p>2.电气与电子工程师协会(IEEE)</p><p>3.国际电信联盟(ITU)</p><p>4.电子工业协会(EIA)</p><p>5.美国国家标准协会(ANSI)</p><h2 id="协议的概念及组成"><a href="#协议的概念及组成" class="headerlink" title="协议的概念及组成"></a>协议的概念及组成</h2><p>协议是通信双方为实现通信而设计的约定或对话规则</p><p>网络协议主要由语义、语法和定时关系3个要素组成</p><h2 id="OSI参考模型-★"><a href="#OSI参考模型-★" class="headerlink" title="OSI参考模型 ★"></a>OSI参考模型 ★</h2><p><img src="/2024/03/15/3-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/OSI.png"></p><p>（1）物理层。物理层（Physical Layer）是OSI参考模型的最低层，其主要功能是利用传输介质为通信的网络节点之间建立、管理和释放物理连接，实现比特流的传输，为数据链路层提供数据传输服务。物理层的数据传输单元是比特，或称为位。</p><p>（2）数据链路层。数据链路层（Data Link Layer）是参考模型的第二层，其主要功能是在物理层提供服务的基础上，在通信实体间建立和维护数据链路连接，传输以帧为单位的数据，并通过差错控制、流量控制等实现点到点的无差错的数据传输。</p><p>（3）网络层。网络层（Network Layer）是参考模型的第三层，其主要功能是实现在通信子网内源节点到目的节点分组的传送。其基本内容包括路由选择、拥塞控制和网络互联等，是网络体系结构中核心的一层，传输的基本单元为分组或数据包。</p><p>（4）传输层。传输层（Transport Layer）是参考模型的第四层，其主要功能是向用户提供可靠的端到端的数据传送。它屏蔽了下层数据传送的细节，是网络体系结构中关键的一层，传输的基本单元为数据报文或数据段。</p><p>（5）会话层。会话层（Session Layer）是参考模型的第五层，其主要功能是负责建立和维护两个节点间的会话连接和数据交换。传输的基本单元也叫报文，但它与传输层的报文有本质上的不同。</p><p>（6）表示层。表示层（Presentation Layer）是参考模型的第六层，其主要功能是负责有关数据表示的问题，主要包括数据格式的转换、数据加密和解密、数据压缩与恢复等功能。传输的基本单元为报文。</p><p>（7）应用层。应用层（Application Layer）是参考模型的最高层，也是最靠近用户的一层，其主要功能是为用户的应用程序提供网络服务和作为用户使用网络功能的接口。传输的基本单元为报文。</p><p><img src="/2024/03/15/3-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/1710484723460.jpg"></p><h2 id="TCP-IP体系协议"><a href="#TCP-IP体系协议" class="headerlink" title="TCP&#x2F;IP体系协议"></a>TCP&#x2F;IP体系协议</h2><p><img src="/2024/03/15/3-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/TCP_IP.jpg"></p><p>TCP&#x2F;IP特点</p><p>（1）开放的协议标准。可以免费使用，并且独立于特定的计算机硬件与操作系统。</p><p>（2）统一分配网络地址。使整个TCP&#x2F;IP设备在网络中具有唯一的I地址。</p><p>（3）适用性强。可同时适用于局域网、广域网及互联网。</p><p>（4）标准化的高层协议。可为用户提供多种可靠的网络服务。</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="常见的标准化组织和机构"><a href="#常见的标准化组织和机构" class="headerlink" title="常见的标准化组织和机构"></a>常见的标准化组织和机构</h2><p>1.国际标准化组织(ISO)</p><p>2.电气与电子工程师协会(IEEE)</p><p>3.国际电信联盟(ITU)</p><p>4.电子工业协会(EIA)</p><p>5.美国国家标准协会(ANSI)</p><h2 id="协议的概念及组成"><a href="#协议的概念及组成" class="headerlink" title="协议的概念及组成"></a>协议的概念及组成</h2><p>协议是通信双方为实现通信而设计的约定或对话规则</p><p>网络协议主要由语义、语法和定时关系3个要素组成</p><h2 id="OSI参考模型-★"><a href="#OSI参考模型-★" class="headerlink" title="OSI参考模型 ★"></a>OSI参考模型 ★</h2><p><img src="https://www.ruusu.cn/2024/03/15/3-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/OSI.png"></p><p>（1）物理层。物理层（Physical Layer）是OSI参考模型的最低层，其主要功能是利用传输介质为通信的网络节点之间建立、管理和释放物理连接，实现比特流的传输，为数据链路层提供数据传输服务。物理层的数据传输单元是比特，或称为位。</p><p>（2）数据链路层。数据链路层（Data Link Layer）是参考模型的第二层，其主要功能是在物理层提供服务的基础上，在通信实体间建立和维护数据链路连接，传输以帧为单位的数据，并通过差错控制、流量控制等实现点到点的无差错的数据传输。</p><p>（3）网络层。网络层（Network Layer）是参考模型的第三层，其主要功能是实现在通信子网内源节点到目的节点分组的传送。其基本内容包括路由选择、拥塞控制和网络互联等，是网络体系结构中核心的一层，传输的基本单元为分组或数据包。</p><p>（4）传输层。传输层（Transport Layer）是参考模型的第四层，其主要功能是向用户提供可靠的端到端的数据传送。它屏蔽了下层数据传送的细节，是网络体系结构中关键的一层，传输的基本单元为数据报文或数据段。</p><p>（5）会话层。会话层（Session Layer）是参考模型的第五层，其主要功能是负责建立和维护两个节点间的会话连接和数据交换。传输的基本单元也叫报文，但它与传输层的报文有本质上的不同。</p><p>（6）表示层。表示层（Presentation Layer）是参考模型的第六层，其主要功能是负责有关数据表示的问题，主要包括数据格式的转换、数据加密和解密、数据压缩与恢复等功能。传输的基本单元为报文。</p><p>（7）应用层。应用层（Application Layer）是参考模型的最高层，也是最靠近用户的一层，其主要功能是为用户的应用程序提供网络服务和作为用户使用网络功能的接口。传输的基本单元为报文。</p><p><img src="https://www.ruusu.cn/2024/03/15/3-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/1710484723460.jpg"></p><h2 id="TCP-IP体系协议"><a href="#TCP-IP体系协议" class="headerlink" title="TCP&#x2F;IP体系协议"></a>TCP&#x2F;IP体系协议</h2><p><img src="https://www.ruusu.cn/2024/03/15/3-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/TCP_IP.jpg"></p><p>TCP&#x2F;IP特点</p><p>（1）开放的协议标准。可以免费使用，并且独立于特定的计算机硬件与操作系统。</p><p>（2）统一分配网络地址。使整个TCP&#x2F;IP设备在网络中具有唯一的I地址。</p><p>（3）适用性强。可同时适用于局域网、广域网及互联网。</p><p>（4）标准化的高层协议。可为用户提供多种可靠的网络服务。</p>]]></content>
     
     
       
       
     <summary type="html">&lt;h2 id=&quot;常见的标准化组织和机构&quot;&gt;&lt;a href=&quot;#常见的标准化组织和机构&quot; class=&quot;headerlink&quot; title=&quot;常见的标准化组织和机构&quot;&gt;&lt;/a&gt;常见的标准化组织和机构&lt;/h2&gt;&lt;p&gt;1.国际标准化组织(ISO)&lt;/p&gt;
 &lt;p&gt;2.电气与电子工程师协会</summary>
+      
+    
+    
+    
+    
+    <category term="网工学习#" scheme="https://www.ruusu.cn/tags/%E7%BD%91%E5%B7%A5%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>4-局域网技术</title>
+    <link href="https://www.ruusu.cn/2024/03/15/4-%E5%B1%80%E5%9F%9F%E7%BD%91%E6%8A%80%E6%9C%AF/"/>
+    <id>https://www.ruusu.cn/2024/03/15/4-%E5%B1%80%E5%9F%9F%E7%BD%91%E6%8A%80%E6%9C%AF/</id>
+    <published>2024-03-15T02:57:48.000Z</published>
+    <updated>2024-03-15T08:06:16.929Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="局域网的特点"><a href="#局域网的特点" class="headerlink" title="局域网的特点"></a>局域网的特点</h2><p>(1)规划、建设、管理与维护的自主性强</p><p>(2)覆盖地理范围小</p><p>(3)综合成本低</p><p>(4)传输速率高</p><p>(5)误码率低,可靠性高</p><p>(6)通常由微机和中小型服务器构成</p><h2 id="局域网的拓扑结构"><a href="#局域网的拓扑结构" class="headerlink" title="局域网的拓扑结构"></a>局域网的拓扑结构</h2><p>总线型 环形 星形</p><h2 id="常见的网络传输介质"><a href="#常见的网络传输介质" class="headerlink" title="常见的网络传输介质"></a>常见的网络传输介质</h2><p>1.同轴电缆</p><p>2.双绞线电缆</p><p><mark>TIA&#x2F;EIA 568-A 绿白 绿 橙白 蓝 蓝白 橙 棕白 棕</mark></p><p><mark>TIA&#x2F;EIA 568-B 橙白 橙 绿白 蓝 蓝白 绿 棕白 棕</mark></p><p>3.光缆</p><p>1.单模光纤:主要用于长距离通信,纤芯直径范围为8μm~10μm,包层直径为125μm，提供单挑光通路。</p><p>单模光纤的带宽宽、衰减小、容量大，能以很高的速率进行长距离传输。</p><p>2.多模光纤:可以同时支持多路光波传输，多模光纤采用普通的发光二极管作光源,传输距离不如单模光纤长,容量也比单模光纤小，但是成本低。</p><h2 id="局域网的标准"><a href="#局域网的标准" class="headerlink" title="局域网的标准"></a>局域网的标准</h2><table><thead><tr><th align="center">标准</th><th align="center">研究内容</th></tr></thead><tbody><tr><td align="center">IEEE 802.1标准</td><td align="center">定义了局域网体系结构、寻址、网络互联以及网络管理</td></tr><tr><td align="center">IEEE 802.2标准</td><td align="center">定义了LLC子层功能与服务协议</td></tr><tr><td align="center">IEEE 802.3标准</td><td align="center">定义了CSMA&#x2F;CD方法及物理层技术规范</td></tr><tr><td align="center">IEEE 802.4标准</td><td align="center">定义了令牌总线访问方法及物理层技术规范</td></tr><tr><td align="center">IEEE 802.5标准</td><td align="center">定义了令牌环访问方法及物理层技术规范</td></tr><tr><td align="center">IEEE 802.6标准</td><td align="center">定义了MAN访问控制方法及物理层技术规范</td></tr><tr><td align="center">IEEE 802.7标准</td><td align="center">定义了宽带网络规范</td></tr><tr><td align="center">IEEE 802.8标准</td><td align="center">定义了光纤网络传输规范</td></tr><tr><td align="center">IEEE 802.9标准</td><td align="center">定义了综合业务局域网接口</td></tr><tr><td align="center">IEEE 802.10标准</td><td align="center">定义了可互操作的局域网的安全性规范</td></tr><tr><td align="center">IEEE 802.11标准</td><td align="center">定义了无线局域网规范</td></tr><tr><td align="center">IEEE 802.12标准</td><td align="center">定义了100VG-AnyLAN规范</td></tr><tr><td align="center">IEEE 802.13标准</td><td align="center">定义了交互式电视网规范</td></tr><tr><td align="center">IEEE 802.14标准</td><td align="center">定义了电缆调制解调器规范</td></tr><tr><td align="center">IEEE 802.15标准</td><td align="center">定义了个人无线网络标准规范</td></tr><tr><td align="center">IEEE 802.16标准</td><td align="center">定义了宽带无线局域网标准规范</td></tr></tbody></table><p>随着局域网技术的发展，该体系还在不断地增加新的标准与协议。例如，目前常用的以太网IEEE 802.3家族出现了802.3u（快速以太网）、802.3z（吉比特光纤以太网）、802.3ab（吉比特双绞线以太网)、802.3ae（十吉比特光纤以太网）、802.3ak（十吉比特铜缆以太网，铜缆距离小于 15m)、802.3an（十吉比特双绞线以太网，6类&#x2F;7类双绞线）。</p><h2 id="CSMA-CD的工作过程"><a href="#CSMA-CD的工作过程" class="headerlink" title="CSMA&#x2F;CD的工作过程"></a>CSMA&#x2F;CD的工作过程</h2><p>(1)载波监听(2)冲突检测方法(3)发现冲突，停止发送(4)延迟随机重发</p><h3 id="CSMA-CD的发送工作过程概括如下。"><a href="#CSMA-CD的发送工作过程概括如下。" class="headerlink" title="CSMA&#x2F;CD的发送工作过程概括如下。"></a>CSMA&#x2F;CD的发送工作过程概括如下。</h3><p>（1）先监听信道，如果信道空闲则发送信息。<br>（2）如果信道忙，则继续监听，直到信道空闲时立即发送。<br>（3）发送信息的同时进行冲突检测，如发现冲突，立即停止剩余信息的发送，并向总线上发出阻<br>塞信号，通知总线上各节点冲突已发生，使各节点重新开始监听与竞争。<br>（4）已发出信息的各节点收到阻塞信号后，都停止继续发送，各等待一段随机时间（不同节点计<br>算得到的随机时间应不同），重新进入监听发送阶段。</p><h3 id="CSMA-CD的接收工作过程"><a href="#CSMA-CD的接收工作过程" class="headerlink" title="CSMA&#x2F;CD的接收工作过程"></a>CSMA&#x2F;CD的接收工作过程</h3><p>CSMA&#x2F;CD 方法的数据接收过程相对简单。总线上每个节点随时都在监听总线，如果有信息帧到来，则接收并得到MAC帧；再分析和判断该顶中的目的地址，如果目的地址与本范点地址相同，则复制接收该帧，否则丢弃该帧。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;局域网的特点&quot;&gt;&lt;a href=&quot;#局域网的特点&quot; class=&quot;headerlink&quot; title=&quot;局域网的特点&quot;&gt;&lt;/a&gt;局域网的特点&lt;/h2&gt;&lt;p&gt;(1)规划、建设、管理与维护的自主性强&lt;/p&gt;
+&lt;p&gt;(2)覆盖地理范围小&lt;/p&gt;
+&lt;p&gt;(3)综合成本低&lt;</summary>
       
     
     
