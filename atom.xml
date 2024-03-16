@@ -6,7 +6,7 @@
   <link href="https://www.ruusu.cn/atom.xml" rel="self"/>
   
   <link href="https://www.ruusu.cn/"/>
-  <updated>2024-03-15T06:13:15.162Z</updated>
+  <updated>2024-03-16T07:01:38.009Z</updated>
   <id>https://www.ruusu.cn/</id>
   
   <author>
@@ -17,11 +17,81 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>5-IP与路由</title>
+    <link href="https://www.ruusu.cn/2024/03/15/5-IP%E4%B8%8E%E8%B7%AF%E7%94%B1/"/>
+    <id>https://www.ruusu.cn/2024/03/15/5-IP%E4%B8%8E%E8%B7%AF%E7%94%B1/</id>
+    <published>2024-03-15T02:57:48.000Z</published>
+    <updated>2024-03-16T07:01:38.009Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="IP地址的分类和组成"><a href="#IP地址的分类和组成" class="headerlink" title="IP地址的分类和组成"></a>IP地址的分类和组成</h2><p>IP地址由网络号(ID)和主机号(ID)组成</p><p>（1）A类地址：最高位是0，随后的7位是网络地址，最后24位是主机地址。<br>（2）B类地址：最高2位分别是1和0，随后的14位是网络地址，最后16位是主机地址。<br>（3）C类地址：最高的3位是110，随后的21位是网络地址，最后8位是主机地址。<br>（4）D类地址：最高的4位是1110，随后的所有位用来做组播地址。<br>（5）E类地址：最高的5位是11110，这类地址为保留地址，不使用。</p><table><thead><tr><th align="center">类别</th><th align="center">第一个字节的格式</th><th align="center">网络数</th><th align="center">每个网络容纳的主机数</th><th align="center">分辨方法(首字节范围)</th></tr></thead><tbody><tr><td align="center">A</td><td align="center">0xxxxxxx</td><td align="center">126</td><td align="center">16777214</td><td align="center">1~126</td></tr><tr><td align="center">B</td><td align="center">10xxxxxx</td><td align="center">16384</td><td align="center">65534</td><td align="center">128~191</td></tr><tr><td align="center">C</td><td align="center">110xxxxx</td><td align="center">2097152</td><td align="center">254</td><td align="center">192~223</td></tr></tbody></table><h2 id="子网划分方法"><a href="#子网划分方法" class="headerlink" title="子网划分方法"></a>子网划分方法</h2><p>固定长度子网划分可变长度子网划分(从大到小划分)子网划分为等大小的子网按地理位置进行子网划分按具体的功能或部分进行子网划分</p><h2 id="子网掩码的含义及表示方式"><a href="#子网掩码的含义及表示方式" class="headerlink" title="子网掩码的含义及表示方式"></a>子网掩码的含义及表示方式</h2><p>子网掩码是一种用于区分IP地址中的网络部分和主机部分的32位二进制数。</p><p>两种表示方式一种是点分十进制(255.255.255.0),另一种是用子网掩码中”1”的个数来标记(255.255.255.224)可以写作&#x2F;27 </p><h2 id="不同网段之间相互连通的方法"><a href="#不同网段之间相互连通的方法" class="headerlink" title="不同网段之间相互连通的方法"></a>不同网段之间相互连通的方法</h2><p>网关</p><h2 id="一个网段中有效-IP-地址的范围的计算"><a href="#一个网段中有效-IP-地址的范围的计算" class="headerlink" title="一个网段中有效 IP 地址的范围的计算"></a>一个网段中有效 IP 地址的范围的计算</h2><p>1：IP地址 &#x3D; 网络地址 + 主机地址，二进制为： 11000000 10101000 00001001 00000011 </p><p>2：子网掩码的二进制表示为： 11111111 11111111 11111110 00000000 解析：前面1的就是网络地址部分，后面0就是主机地址，所以此处有9位主机地址。 </p><p>3：网络地址 &#x3D; 子网掩码 &amp; IP地址，即：192.168.8.0 </p><p>4：广播地址 &#x3D; 3中求出的网络地址的主机地址部分置1，即：192.168.9.255 </p><p>5：有效的IP段计算： 开始地址 &#x3D; 网络地址+1，即192.168.8.1 结束地址 &#x3D; 广播地址-1，即192.168.9.254 那么当前示例的有效IP段为：192.168.8.1~192.168.9.254</p><h2 id="ARP-协议的作用"><a href="#ARP-协议的作用" class="headerlink" title="ARP 协议的作用"></a>ARP 协议的作用</h2><p>1.局域网内实现地址解析</p><p>2.跨网络实现地址解析</p><h2 id="路由的作用"><a href="#路由的作用" class="headerlink" title="路由的作用"></a>路由的作用</h2><p>选路与传输信息 也叫(数据)交换</p><h2 id="自治系统的含义"><a href="#自治系统的含义" class="headerlink" title="自治系统的含义"></a>自治系统的含义</h2><p>自治系统(Autonomous System,AS)指的是由单一实体进行控制和管理的路由器集合,自治系统通常又称为域。</p><h2 id="RIP-协议的工作原理及更新过程"><a href="#RIP-协议的工作原理及更新过程" class="headerlink" title="RIP 协议的工作原理及更新过程"></a>RIP 协议的工作原理及更新过程</h2><p>基本原理：相邻路由器之间互相交换整个路由表</p><p>更新过程</p><ol><li><p>触发事件：当网络中的一个路由器或链路发生变化时，例如路由器故障、链路断开或新的链路建立，触发更新事件。</p></li><li><p>发送更新消息：受影响的路由器将通过广播或多播方式发送更新消息给相邻的路由器。该消息包含被改变的目标网络及其相关信息。</p></li><li><p>距离计算：接收到更新消息的邻居节点会根据接收到的信息和自身已知网络拓扑，重新计算到达目标网络的距离。这个距离可能是根据Hop数、Metric值等来衡量。</p></li><li><p>更新转发表：基于重新计算得出的最短路径，邻居节点会相应地更新自己的转发表，以反映新的可达性情况。这样可以确保数据包能够按照最优路径进行转发。</p></li><li><p>向外传播：更新后的转发表信息将继续向其他邻居节点传播，以便整个网络中所有节点都能获得最新的网络拓扑信息。</p></li><li><p>收敛稳定：经过一系列的更新和转发过程后，当网络中的所有路由器都收敛到一个一致的拓扑状态时，RIP协议达到了稳定状态。</p><blockquote><pre><code>   1. 路由器之间交换路由表信息。当一个路由器加入网络或者网络拓扑发生变化时，它会向相邻的路由器发送更新信息。这些更新信息包括路由器的IP地址、目标网络的IP地址、距离和下一跳路由器的IP地址。   2. 计算最短路径。当一个路由器收到更新信息时，它会将这些信息添加到它的路由表中，并根据距离向量算法计算到达目标网络的最短路径。最短路径是指从当前路由器到达目标网络所需的跳数。   3. 更新路由表。如果一个路由器发现到达目标网络的路径有改变，它会更新自己的路由表，并将这些信息发送给相邻的路由器。这样，整个网络中的路由器都会更新自己的路由表，以反映最新的网络拓扑。   4. 定期更新路由表信息。RIP协议会定期发送路由表信息，以确保整个网络中的路由器都有最新的路由表信息。默认情况下，RIP协议每30秒发送一次更新信息。</code></pre></blockquote></li></ol><h2 id="OSPF-协议的工作过程"><a href="#OSPF-协议的工作过程" class="headerlink" title="OSPF 协议的工作过程"></a>OSPF 协议的工作过程</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">graph LR;</span><br><span class="line">寻找邻居--&gt;邻接关系的建立--&gt;链路状态信息传递--&gt;路由计算</span><br></pre></td></tr></table></figure><h2 id="IPv6-地址的地址表示"><a href="#IPv6-地址的地址表示" class="headerlink" title="IPv6 地址的地址表示"></a>IPv6 地址的地址表示</h2><p>1.首选格式</p><p>X:X:X:X:X:X:X:X(一个X表示一个4位的十六进制数)</p><p>可以将每一段中的前导零省去，但是必须保证每段有一个数字</p><p>例如2001:0410:0000:0001:0000:0000:0000:45FF</p><p>2001:410:0:1:0:0:0:45FF</p><p>2.压缩格式</p><p>当一个或多个连续的段内各位全为0时可以使用::(双冒号)来表示,但一个地址中只能使用一次::</p><p>例如2001:410:0:1:0:0:0:45FF</p><p>2001:410:0:1::45FF<font color="grenn">√</font></p><p>2001:410::1:45FF:x:</p><p>3.内嵌IPv4地址的IPv6地址</p><p>X:X:X:X:X:X:d.d.d.d(d表示IPv4地址中的一个十进制数)</p><p>IPv4兼容IPv6地址:::d.d.d.d</p><p>IPv4映射IPv6地址:::FFFF:d.d.d.d</p><p>IPv6前缀长度类似IPv4网络ID地址&#x2F;前缀长度2001::1&#x2F;64</p><p>4.对于URL地址IPv6地址需要使用”[]”括起来,例如https:&#x2F;&#x2F;[2606:50c0:8001::153]</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;IP地址的分类和组成&quot;&gt;&lt;a href=&quot;#IP地址的分类和组成&quot; class=&quot;headerlink&quot; title=&quot;IP地址的分类和组成&quot;&gt;&lt;/a&gt;IP地址的分类和组成&lt;/h2&gt;&lt;p&gt;IP地址由网络号(ID)和主机号(ID)组成&lt;/p&gt;
+&lt;p&gt;（1）A类地址：</summary>
+      
+    
+    
+    
+    
+    <category term="网工学习" scheme="https://www.ruusu.cn/tags/%E7%BD%91%E5%B7%A5%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>4-局域网技术</title>
+    <link href="https://www.ruusu.cn/2024/03/15/4-%E5%B1%80%E5%9F%9F%E7%BD%91%E6%8A%80%E6%9C%AF/"/>
+    <id>https://www.ruusu.cn/2024/03/15/4-%E5%B1%80%E5%9F%9F%E7%BD%91%E6%8A%80%E6%9C%AF/</id>
+    <published>2024-03-15T01:57:48.000Z</published>
+    <updated>2024-03-16T07:01:38.701Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="局域网的特点"><a href="#局域网的特点" class="headerlink" title="局域网的特点"></a>局域网的特点</h2><p>(1)规划、建设、管理与维护的自主性强</p><p>(2)覆盖地理范围小</p><p>(3)综合成本低</p><p>(4)传输速率高</p><p>(5)误码率低,可靠性高</p><p>(6)通常由微机和中小型服务器构成</p><h2 id="局域网的拓扑结构"><a href="#局域网的拓扑结构" class="headerlink" title="局域网的拓扑结构"></a>局域网的拓扑结构</h2><p>总线型 环形 星形</p><h2 id="常见的网络传输介质"><a href="#常见的网络传输介质" class="headerlink" title="常见的网络传输介质"></a>常见的网络传输介质</h2><p>1.同轴电缆</p><p>2.双绞线电缆</p><p><mark>TIA&#x2F;EIA 568-A 绿白 绿 橙白 蓝 蓝白 橙 棕白 棕</mark></p><p><mark>TIA&#x2F;EIA 568-B 橙白 橙 绿白 蓝 蓝白 绿 棕白 棕</mark></p><p>3.光缆</p><p>1.单模光纤:主要用于长距离通信,纤芯直径范围为8μm~10μm,包层直径为125μm，提供单挑光通路。</p><p>单模光纤的带宽宽、衰减小、容量大，能以很高的速率进行长距离传输。</p><p>2.多模光纤:可以同时支持多路光波传输，多模光纤采用普通的发光二极管作光源,传输距离不如单模光纤长,容量也比单模光纤小，但是成本低。</p><h2 id="局域网的标准"><a href="#局域网的标准" class="headerlink" title="局域网的标准"></a>局域网的标准</h2><table><thead><tr><th align="center">标准</th><th align="center">研究内容</th></tr></thead><tbody><tr><td align="center">IEEE 802.1标准</td><td align="center">定义了局域网体系结构、寻址、网络互联以及网络管理</td></tr><tr><td align="center">IEEE 802.2标准</td><td align="center">定义了LLC子层功能与服务协议</td></tr><tr><td align="center">IEEE 802.3标准</td><td align="center">定义了CSMA&#x2F;CD方法及物理层技术规范</td></tr><tr><td align="center">IEEE 802.4标准</td><td align="center">定义了令牌总线访问方法及物理层技术规范</td></tr><tr><td align="center">IEEE 802.5标准</td><td align="center">定义了令牌环访问方法及物理层技术规范</td></tr><tr><td align="center">IEEE 802.6标准</td><td align="center">定义了MAN访问控制方法及物理层技术规范</td></tr><tr><td align="center">IEEE 802.7标准</td><td align="center">定义了宽带网络规范</td></tr><tr><td align="center">IEEE 802.8标准</td><td align="center">定义了光纤网络传输规范</td></tr><tr><td align="center">IEEE 802.9标准</td><td align="center">定义了综合业务局域网接口</td></tr><tr><td align="center">IEEE 802.10标准</td><td align="center">定义了可互操作的局域网的安全性规范</td></tr><tr><td align="center">IEEE 802.11标准</td><td align="center">定义了无线局域网规范</td></tr><tr><td align="center">IEEE 802.12标准</td><td align="center">定义了100VG-AnyLAN规范</td></tr><tr><td align="center">IEEE 802.13标准</td><td align="center">定义了交互式电视网规范</td></tr><tr><td align="center">IEEE 802.14标准</td><td align="center">定义了电缆调制解调器规范</td></tr><tr><td align="center">IEEE 802.15标准</td><td align="center">定义了个人无线网络标准规范</td></tr><tr><td align="center">IEEE 802.16标准</td><td align="center">定义了宽带无线局域网标准规范</td></tr></tbody></table><p>随着局域网技术的发展，该体系还在不断地增加新的标准与协议。例如，目前常用的以太网IEEE 802.3家族出现了802.3u（快速以太网）、802.3z（吉比特光纤以太网）、802.3ab（吉比特双绞线以太网)、802.3ae（十吉比特光纤以太网）、802.3ak（十吉比特铜缆以太网，铜缆距离小于 15m)、802.3an（十吉比特双绞线以太网，6类&#x2F;7类双绞线）。</p><h2 id="CSMA-CD的工作过程"><a href="#CSMA-CD的工作过程" class="headerlink" title="CSMA&#x2F;CD的工作过程"></a>CSMA&#x2F;CD的工作过程</h2><p>(1)载波监听(2)冲突检测方法(3)发现冲突，停止发送(4)延迟随机重发</p><h3 id="CSMA-CD的发送工作过程概括如下。"><a href="#CSMA-CD的发送工作过程概括如下。" class="headerlink" title="CSMA&#x2F;CD的发送工作过程概括如下。"></a>CSMA&#x2F;CD的发送工作过程概括如下。</h3><p>（1）先监听信道，如果信道空闲则发送信息。<br>（2）如果信道忙，则继续监听，直到信道空闲时立即发送。<br>（3）发送信息的同时进行冲突检测，如发现冲突，立即停止剩余信息的发送，并向总线上发出阻<br>塞信号，通知总线上各节点冲突已发生，使各节点重新开始监听与竞争。<br>（4）已发出信息的各节点收到阻塞信号后，都停止继续发送，各等待一段随机时间（不同节点计<br>算得到的随机时间应不同），重新进入监听发送阶段。</p><h3 id="CSMA-CD的接收工作过程"><a href="#CSMA-CD的接收工作过程" class="headerlink" title="CSMA&#x2F;CD的接收工作过程"></a>CSMA&#x2F;CD的接收工作过程</h3><p>CSMA&#x2F;CD 方法的数据接收过程相对简单。总线上每个节点随时都在监听总线，如果有信息帧到来，则接收并得到MAC帧；再分析和判断该顶中的目的地址，如果目的地址与本范点地址相同，则复制接收该帧，否则丢弃该帧。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;局域网的特点&quot;&gt;&lt;a href=&quot;#局域网的特点&quot; class=&quot;headerlink&quot; title=&quot;局域网的特点&quot;&gt;&lt;/a&gt;局域网的特点&lt;/h2&gt;&lt;p&gt;(1)规划、建设、管理与维护的自主性强&lt;/p&gt;
+&lt;p&gt;(2)覆盖地理范围小&lt;/p&gt;
+&lt;p&gt;(3)综合成本低&lt;</summary>
+      
+    
+    
+    
+    
+    <category term="网工学习" scheme="https://www.ruusu.cn/tags/%E7%BD%91%E5%B7%A5%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>3-计算机网络体系结构 ★</title>
+    <link href="https://www.ruusu.cn/2024/03/15/3-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/"/>
+    <id>https://www.ruusu.cn/2024/03/15/3-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/</id>
+    <published>2024-03-15T00:57:48.000Z</published>
+    <updated>2024-03-16T07:01:39.267Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="常见的标准化组织和机构"><a href="#常见的标准化组织和机构" class="headerlink" title="常见的标准化组织和机构"></a>常见的标准化组织和机构</h2><p>1.国际标准化组织(ISO)</p><p>2.电气与电子工程师协会(IEEE)</p><p>3.国际电信联盟(ITU)</p><p>4.电子工业协会(EIA)</p><p>5.美国国家标准协会(ANSI)</p><h2 id="协议的概念及组成"><a href="#协议的概念及组成" class="headerlink" title="协议的概念及组成"></a>协议的概念及组成</h2><p>协议是通信双方为实现通信而设计的约定或对话规则</p><p>网络协议主要由语义、语法和定时关系3个要素组成</p><h2 id="OSI参考模型-★"><a href="#OSI参考模型-★" class="headerlink" title="OSI参考模型 ★"></a>OSI参考模型 ★</h2><p><img src="https://www.ruusu.cn/2024/03/15/3-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/OSI.png"></p><p>（1）物理层。物理层（Physical Layer）是OSI参考模型的最低层，其主要功能是利用传输介质为通信的网络节点之间建立、管理和释放物理连接，实现比特流的传输，为数据链路层提供数据传输服务。物理层的数据传输单元是比特，或称为位。</p><p>（2）数据链路层。数据链路层（Data Link Layer）是参考模型的第二层，其主要功能是在物理层提供服务的基础上，在通信实体间建立和维护数据链路连接，传输以帧为单位的数据，并通过差错控制、流量控制等实现点到点的无差错的数据传输。</p><p>（3）网络层。网络层（Network Layer）是参考模型的第三层，其主要功能是实现在通信子网内源节点到目的节点分组的传送。其基本内容包括路由选择、拥塞控制和网络互联等，是网络体系结构中核心的一层，传输的基本单元为分组或数据包。</p><p>（4）传输层。传输层（Transport Layer）是参考模型的第四层，其主要功能是向用户提供可靠的端到端的数据传送。它屏蔽了下层数据传送的细节，是网络体系结构中关键的一层，传输的基本单元为数据报文或数据段。</p><p>（5）会话层。会话层（Session Layer）是参考模型的第五层，其主要功能是负责建立和维护两个节点间的会话连接和数据交换。传输的基本单元也叫报文，但它与传输层的报文有本质上的不同。</p><p>（6）表示层。表示层（Presentation Layer）是参考模型的第六层，其主要功能是负责有关数据表示的问题，主要包括数据格式的转换、数据加密和解密、数据压缩与恢复等功能。传输的基本单元为报文。</p><p>（7）应用层。应用层（Application Layer）是参考模型的最高层，也是最靠近用户的一层，其主要功能是为用户的应用程序提供网络服务和作为用户使用网络功能的接口。传输的基本单元为报文。</p><p><img src="https://www.ruusu.cn/2024/03/15/3-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/1710484723460.jpg"></p><h2 id="TCP-IP体系协议"><a href="#TCP-IP体系协议" class="headerlink" title="TCP&#x2F;IP体系协议"></a>TCP&#x2F;IP体系协议</h2><p><img src="https://www.ruusu.cn/2024/03/15/3-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/TCP_IP.jpg"></p><p>TCP&#x2F;IP特点</p><p>（1）开放的协议标准。可以免费使用，并且独立于特定的计算机硬件与操作系统。</p><p>（2）统一分配网络地址。使整个TCP&#x2F;IP设备在网络中具有唯一的I地址。</p><p>（3）适用性强。可同时适用于局域网、广域网及互联网。</p><p>（4）标准化的高层协议。可为用户提供多种可靠的网络服务。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;常见的标准化组织和机构&quot;&gt;&lt;a href=&quot;#常见的标准化组织和机构&quot; class=&quot;headerlink&quot; title=&quot;常见的标准化组织和机构&quot;&gt;&lt;/a&gt;常见的标准化组织和机构&lt;/h2&gt;&lt;p&gt;1.国际标准化组织(ISO)&lt;/p&gt;
+&lt;p&gt;2.电气与电子工程师协会</summary>
+      
+    
+    
+    
+    
+    <category term="网工学习" scheme="https://www.ruusu.cn/tags/%E7%BD%91%E5%B7%A5%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>2-数据通信基础知识</title>
     <link href="https://www.ruusu.cn/2024/03/15/2-%E6%95%B0%E6%8D%AE%E9%80%9A%E4%BF%A1%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
     <id>https://www.ruusu.cn/2024/03/15/2-%E6%95%B0%E6%8D%AE%E9%80%9A%E4%BF%A1%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</id>
-    <published>2024-03-15T02:57:48.000Z</published>
-    <updated>2024-03-15T06:13:15.162Z</updated>
+    <published>2024-03-14T23:57:48.000Z</published>
+    <updated>2024-03-16T07:01:39.783Z</updated>
     
     <content type="html"><![CDATA[<h2 id="数据通信的基本概念"><a href="#数据通信的基本概念" class="headerlink" title="数据通信的基本概念"></a>数据通信的基本概念</h2><p>数据通信是指在计算机之间传送表示<mark>字母、数字、符号</mark>的二进制比特序列的模拟或数字信号的过程</p><h2 id="数据编码的基本方法"><a href="#数据编码的基本方法" class="headerlink" title="数据编码的基本方法"></a>数据编码的基本方法</h2><p>(1)数字数据的模拟信号编码,主要用于数字信号的模拟传输。</p><p>(2)数字数据的数字信号编码,主要用于数字信号的数字传输。</p><p>(3)模拟信号的数字信号编码,主要用于模拟信号的数字传输。</p><h2 id="数据通信的方式"><a href="#数据通信的方式" class="headerlink" title="数据通信的方式"></a>数据通信的方式</h2><p>(1)单工通信:信号只能向一个方向传输</p><p>(2)半双工通信:信号可以双向传输,但是必须交替进行,一个时间只能向一个方向传输</p><p>(3)全双工通信:信号可以同时双向传输</p><h2 id="数据通信中的主要技术指标"><a href="#数据通信中的主要技术指标" class="headerlink" title="数据通信中的主要技术指标"></a>数据通信中的主要技术指标</h2><p>1.数据传输速率:每秒能传输的二进制信息位数即数据传输速率也叫比特率,单位名称位&#x2F;秒,单位符号记作bit&#x2F;s</p><p>2.信号传输速率:单位时间里通过信道传输的码元个数即信号传输速率,也叫码元速率、调制速率、或波特率,单位名称为波特,单位符号记作Baud</p><p>3.信道容量:信道容量表示一个信道的最大数据传输速率,单位符号bit&#x2F;s</p><p>4.误码率:是二进制数据位传输时出错的概率,是衡量数据通信系统在正常工作时的传输可靠性的指标</p><h2 id="数字数据信号的编码方式"><a href="#数字数据信号的编码方式" class="headerlink" title="数字数据信号的编码方式"></a>数字数据信号的编码方式</h2><h3 id="模拟信号"><a href="#模拟信号" class="headerlink" title="模拟信号"></a>模拟信号</h3><p>1.幅移键控:也叫作<mark>调幅</mark>,是通过改变载波信号<mark>振幅</mark>来表示数字信号1、0的</p><p>2.频移键控:也叫作<mark>调频</mark>,是通过改变载波信号角<mark>频率</mark>来表示数字信号1、0的</p><p>3.相移键控:也叫作<mark>调相</mark>,是通过改变载波信号的<mark>相位值</mark>来表示数字信号的1、0的</p><h3 id="数字信号"><a href="#数字信号" class="headerlink" title="数字信号"></a>数字信号</h3><p>1.不归零编码:NRZ规定用低电平表示逻辑”0”,高电平表示逻辑”1”</p><p>2.曼彻斯特编码</p><p>3.差分曼彻斯特编码</p><h2 id="语音数字化的-PCM-操作包含的步骤"><a href="#语音数字化的-PCM-操作包含的步骤" class="headerlink" title="语音数字化的 PCM 操作包含的步骤"></a>语音数字化的 PCM 操作包含的步骤</h2><p>脉冲编码调制是模拟数据数字化的主要方法。</p><p>采样、量化、编码</p><h2 id="多路复用技术的分类"><a href="#多路复用技术的分类" class="headerlink" title="多路复用技术的分类"></a>多路复用技术的分类</h2><p>1.频分多路复用用不同的频率</p><p>2.波分多路复用用不同的波长</p><p>3.时分多路复用用不同的事件</p><h2 id="数据交换技术的种类"><a href="#数据交换技术的种类" class="headerlink" title="数据交换技术的种类"></a>数据交换技术的种类</h2><p>电路交换 报文交换 报文分组交换</p>]]></content>
     
@@ -42,8 +112,8 @@
     <title>1-计算机网络概述</title>
     <link href="https://www.ruusu.cn/2024/03/15/1-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0/"/>
     <id>https://www.ruusu.cn/2024/03/15/1-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0/</id>
-    <published>2024-03-15T02:57:48.000Z</published>
-    <updated>2024-03-16T02:45:28.793Z</updated>
+    <published>2024-03-14T22:57:48.000Z</published>
+    <updated>2024-03-16T07:01:40.577Z</updated>
     
     <content type="html"><![CDATA[<h2 id="计算机网络的定义"><a href="#计算机网络的定义" class="headerlink" title="计算机网络的定义"></a>计算机网络的定义</h2><p>计算机网络是通过<mark>通信设备</mark>和<mark>通信线路</mark>，按照相同的<mark>通信协议</mark>，将分布在不同地理位置且功能独立的<mark>多个计算机系统</mark>相互连接，在<mark>网络操作系统</mark>的管理和控制下，实现<mark>资源共享</mark>和<mark>高速通信</mark>的系统。</p><h2 id="计算机网络的组成"><a href="#计算机网络的组成" class="headerlink" title="计算机网络的组成"></a>计算机网络的组成</h2><p><mark>按逻辑功能可分为资源子网和通信子网两部分</mark> </p><p>(资源子网是计算机网络中面向用户的部分，负责<mark>数据处理工作</mark>)</p><p>(通信子网是网络中的数据通信系统，用于信息交换的网络节点处理器和通信链路组成，主要负责<mark>通信处理工作</mark>)</p><p>若只访问本地计算机可在资源子网内部进行，如要访问异地计算机，则要通过通信子网。</p><p><mark>按网络结构可分为网络硬件和网络软件两部分</mark></p><h2 id="计算机网络的分类"><a href="#计算机网络的分类" class="headerlink" title="计算机网络的分类"></a>计算机网络的分类</h2><p>按网络的作用范围划分：<mark>局域网、城域网和广域网</mark> 差异主要存在于覆盖范围和传输速率</p><p>按网络的传输方式划分：<mark>点对点传输方式</mark> <mark>广播传输方式</mark></p><p>按通信介质划分：<mark>有线网</mark> <mark>无线网</mark></p><p>按网络的使用范围划分：<mark>公用网</mark> <mark>专用网</mark></p><p>按网络控制方式划分：<mark>集中式计算机网络</mark> <mark>分布式计算机网络</mark></p><p>按拓扑结构划分：<mark>总线型星型环形树形复合型网状</mark></p><h2 id="计算机网络的拓扑结构"><a href="#计算机网络的拓扑结构" class="headerlink" title="计算机网络的拓扑结构"></a>计算机网络的拓扑结构</h2><p>总线型拓扑结构：<mark>结构简单，易于扩充，但网络中节点多时，传输速率会减小。</mark>(很少采用)</p><p>星形结构：<mark>结构接单、易于实现、维护容易。</mark> <mark>以中心节点进行通信</mark></p><p>环形结构：<mark>路劲选择简单、传输延迟确定，但增减节点较复杂、单环传输不可靠。</mark></p><p>树形结构：<mark>是星形结构的一种扩展，适用于分级管理和控制的网络系统</mark></p><p>网状结构：<mark>可充分、合理地使用网络资源传输数据，并且具有很高的可靠性，但这种可靠性是以高投资和高复杂度的管理为代价的。</mark></p>]]></content>
     
@@ -51,76 +121,6 @@
       
       
     <summary type="html">&lt;h2 id=&quot;计算机网络的定义&quot;&gt;&lt;a href=&quot;#计算机网络的定义&quot; class=&quot;headerlink&quot; title=&quot;计算机网络的定义&quot;&gt;&lt;/a&gt;计算机网络的定义&lt;/h2&gt;&lt;p&gt;计算机网络是通过&lt;mark&gt;通信设备&lt;/mark&gt;和&lt;mark&gt;通信线路&lt;/mark&gt;，按照</summary>
-      
-    
-    
-    
-    
-    <category term="网工学习" scheme="https://www.ruusu.cn/tags/%E7%BD%91%E5%B7%A5%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>3-计算机网络体系结构 ★</title>
-    <link href="https://www.ruusu.cn/2024/03/15/3-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/"/>
-    <id>https://www.ruusu.cn/2024/03/15/3-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/</id>
-    <published>2024-03-15T02:57:48.000Z</published>
-    <updated>2024-03-16T06:56:26.724Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="常见的标准化组织和机构"><a href="#常见的标准化组织和机构" class="headerlink" title="常见的标准化组织和机构"></a>常见的标准化组织和机构</h2><p>1.国际标准化组织(ISO)</p><p>2.电气与电子工程师协会(IEEE)</p><p>3.国际电信联盟(ITU)</p><p>4.电子工业协会(EIA)</p><p>5.美国国家标准协会(ANSI)</p><h2 id="协议的概念及组成"><a href="#协议的概念及组成" class="headerlink" title="协议的概念及组成"></a>协议的概念及组成</h2><p>协议是通信双方为实现通信而设计的约定或对话规则</p><p>网络协议主要由语义、语法和定时关系3个要素组成</p><h2 id="OSI参考模型-★"><a href="#OSI参考模型-★" class="headerlink" title="OSI参考模型 ★"></a>OSI参考模型 ★</h2><p><img src="https://www.ruusu.cn/2024/03/15/3-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/OSI.png"></p><p>（1）物理层。物理层（Physical Layer）是OSI参考模型的最低层，其主要功能是利用传输介质为通信的网络节点之间建立、管理和释放物理连接，实现比特流的传输，为数据链路层提供数据传输服务。物理层的数据传输单元是比特，或称为位。</p><p>（2）数据链路层。数据链路层（Data Link Layer）是参考模型的第二层，其主要功能是在物理层提供服务的基础上，在通信实体间建立和维护数据链路连接，传输以帧为单位的数据，并通过差错控制、流量控制等实现点到点的无差错的数据传输。</p><p>（3）网络层。网络层（Network Layer）是参考模型的第三层，其主要功能是实现在通信子网内源节点到目的节点分组的传送。其基本内容包括路由选择、拥塞控制和网络互联等，是网络体系结构中核心的一层，传输的基本单元为分组或数据包。</p><p>（4）传输层。传输层（Transport Layer）是参考模型的第四层，其主要功能是向用户提供可靠的端到端的数据传送。它屏蔽了下层数据传送的细节，是网络体系结构中关键的一层，传输的基本单元为数据报文或数据段。</p><p>（5）会话层。会话层（Session Layer）是参考模型的第五层，其主要功能是负责建立和维护两个节点间的会话连接和数据交换。传输的基本单元也叫报文，但它与传输层的报文有本质上的不同。</p><p>（6）表示层。表示层（Presentation Layer）是参考模型的第六层，其主要功能是负责有关数据表示的问题，主要包括数据格式的转换、数据加密和解密、数据压缩与恢复等功能。传输的基本单元为报文。</p><p>（7）应用层。应用层（Application Layer）是参考模型的最高层，也是最靠近用户的一层，其主要功能是为用户的应用程序提供网络服务和作为用户使用网络功能的接口。传输的基本单元为报文。</p><p><img src="https://www.ruusu.cn/2024/03/15/3-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/1710484723460.jpg"></p><h2 id="TCP-IP体系协议"><a href="#TCP-IP体系协议" class="headerlink" title="TCP&#x2F;IP体系协议"></a>TCP&#x2F;IP体系协议</h2><p><img src="https://www.ruusu.cn/2024/03/15/3-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/TCP_IP.jpg"></p><p>TCP&#x2F;IP特点</p><p>（1）开放的协议标准。可以免费使用，并且独立于特定的计算机硬件与操作系统。</p><p>（2）统一分配网络地址。使整个TCP&#x2F;IP设备在网络中具有唯一的I地址。</p><p>（3）适用性强。可同时适用于局域网、广域网及互联网。</p><p>（4）标准化的高层协议。可为用户提供多种可靠的网络服务。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;常见的标准化组织和机构&quot;&gt;&lt;a href=&quot;#常见的标准化组织和机构&quot; class=&quot;headerlink&quot; title=&quot;常见的标准化组织和机构&quot;&gt;&lt;/a&gt;常见的标准化组织和机构&lt;/h2&gt;&lt;p&gt;1.国际标准化组织(ISO)&lt;/p&gt;
-&lt;p&gt;2.电气与电子工程师协会</summary>
-      
-    
-    
-    
-    
-    <category term="网工学习" scheme="https://www.ruusu.cn/tags/%E7%BD%91%E5%B7%A5%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>4-局域网技术</title>
-    <link href="https://www.ruusu.cn/2024/03/15/4-%E5%B1%80%E5%9F%9F%E7%BD%91%E6%8A%80%E6%9C%AF/"/>
-    <id>https://www.ruusu.cn/2024/03/15/4-%E5%B1%80%E5%9F%9F%E7%BD%91%E6%8A%80%E6%9C%AF/</id>
-    <published>2024-03-15T02:57:48.000Z</published>
-    <updated>2024-03-16T06:56:23.520Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="局域网的特点"><a href="#局域网的特点" class="headerlink" title="局域网的特点"></a>局域网的特点</h2><p>(1)规划、建设、管理与维护的自主性强</p><p>(2)覆盖地理范围小</p><p>(3)综合成本低</p><p>(4)传输速率高</p><p>(5)误码率低,可靠性高</p><p>(6)通常由微机和中小型服务器构成</p><h2 id="局域网的拓扑结构"><a href="#局域网的拓扑结构" class="headerlink" title="局域网的拓扑结构"></a>局域网的拓扑结构</h2><p>总线型 环形 星形</p><h2 id="常见的网络传输介质"><a href="#常见的网络传输介质" class="headerlink" title="常见的网络传输介质"></a>常见的网络传输介质</h2><p>1.同轴电缆</p><p>2.双绞线电缆</p><p><mark>TIA&#x2F;EIA 568-A 绿白 绿 橙白 蓝 蓝白 橙 棕白 棕</mark></p><p><mark>TIA&#x2F;EIA 568-B 橙白 橙 绿白 蓝 蓝白 绿 棕白 棕</mark></p><p>3.光缆</p><p>1.单模光纤:主要用于长距离通信,纤芯直径范围为8μm~10μm,包层直径为125μm，提供单挑光通路。</p><p>单模光纤的带宽宽、衰减小、容量大，能以很高的速率进行长距离传输。</p><p>2.多模光纤:可以同时支持多路光波传输，多模光纤采用普通的发光二极管作光源,传输距离不如单模光纤长,容量也比单模光纤小，但是成本低。</p><h2 id="局域网的标准"><a href="#局域网的标准" class="headerlink" title="局域网的标准"></a>局域网的标准</h2><table><thead><tr><th align="center">标准</th><th align="center">研究内容</th></tr></thead><tbody><tr><td align="center">IEEE 802.1标准</td><td align="center">定义了局域网体系结构、寻址、网络互联以及网络管理</td></tr><tr><td align="center">IEEE 802.2标准</td><td align="center">定义了LLC子层功能与服务协议</td></tr><tr><td align="center">IEEE 802.3标准</td><td align="center">定义了CSMA&#x2F;CD方法及物理层技术规范</td></tr><tr><td align="center">IEEE 802.4标准</td><td align="center">定义了令牌总线访问方法及物理层技术规范</td></tr><tr><td align="center">IEEE 802.5标准</td><td align="center">定义了令牌环访问方法及物理层技术规范</td></tr><tr><td align="center">IEEE 802.6标准</td><td align="center">定义了MAN访问控制方法及物理层技术规范</td></tr><tr><td align="center">IEEE 802.7标准</td><td align="center">定义了宽带网络规范</td></tr><tr><td align="center">IEEE 802.8标准</td><td align="center">定义了光纤网络传输规范</td></tr><tr><td align="center">IEEE 802.9标准</td><td align="center">定义了综合业务局域网接口</td></tr><tr><td align="center">IEEE 802.10标准</td><td align="center">定义了可互操作的局域网的安全性规范</td></tr><tr><td align="center">IEEE 802.11标准</td><td align="center">定义了无线局域网规范</td></tr><tr><td align="center">IEEE 802.12标准</td><td align="center">定义了100VG-AnyLAN规范</td></tr><tr><td align="center">IEEE 802.13标准</td><td align="center">定义了交互式电视网规范</td></tr><tr><td align="center">IEEE 802.14标准</td><td align="center">定义了电缆调制解调器规范</td></tr><tr><td align="center">IEEE 802.15标准</td><td align="center">定义了个人无线网络标准规范</td></tr><tr><td align="center">IEEE 802.16标准</td><td align="center">定义了宽带无线局域网标准规范</td></tr></tbody></table><p>随着局域网技术的发展，该体系还在不断地增加新的标准与协议。例如，目前常用的以太网IEEE 802.3家族出现了802.3u（快速以太网）、802.3z（吉比特光纤以太网）、802.3ab（吉比特双绞线以太网)、802.3ae（十吉比特光纤以太网）、802.3ak（十吉比特铜缆以太网，铜缆距离小于 15m)、802.3an（十吉比特双绞线以太网，6类&#x2F;7类双绞线）。</p><h2 id="CSMA-CD的工作过程"><a href="#CSMA-CD的工作过程" class="headerlink" title="CSMA&#x2F;CD的工作过程"></a>CSMA&#x2F;CD的工作过程</h2><p>(1)载波监听(2)冲突检测方法(3)发现冲突，停止发送(4)延迟随机重发</p><h3 id="CSMA-CD的发送工作过程概括如下。"><a href="#CSMA-CD的发送工作过程概括如下。" class="headerlink" title="CSMA&#x2F;CD的发送工作过程概括如下。"></a>CSMA&#x2F;CD的发送工作过程概括如下。</h3><p>（1）先监听信道，如果信道空闲则发送信息。<br>（2）如果信道忙，则继续监听，直到信道空闲时立即发送。<br>（3）发送信息的同时进行冲突检测，如发现冲突，立即停止剩余信息的发送，并向总线上发出阻<br>塞信号，通知总线上各节点冲突已发生，使各节点重新开始监听与竞争。<br>（4）已发出信息的各节点收到阻塞信号后，都停止继续发送，各等待一段随机时间（不同节点计<br>算得到的随机时间应不同），重新进入监听发送阶段。</p><h3 id="CSMA-CD的接收工作过程"><a href="#CSMA-CD的接收工作过程" class="headerlink" title="CSMA&#x2F;CD的接收工作过程"></a>CSMA&#x2F;CD的接收工作过程</h3><p>CSMA&#x2F;CD 方法的数据接收过程相对简单。总线上每个节点随时都在监听总线，如果有信息帧到来，则接收并得到MAC帧；再分析和判断该顶中的目的地址，如果目的地址与本范点地址相同，则复制接收该帧，否则丢弃该帧。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;局域网的特点&quot;&gt;&lt;a href=&quot;#局域网的特点&quot; class=&quot;headerlink&quot; title=&quot;局域网的特点&quot;&gt;&lt;/a&gt;局域网的特点&lt;/h2&gt;&lt;p&gt;(1)规划、建设、管理与维护的自主性强&lt;/p&gt;
-&lt;p&gt;(2)覆盖地理范围小&lt;/p&gt;
-&lt;p&gt;(3)综合成本低&lt;</summary>
-      
-    
-    
-    
-    
-    <category term="网工学习" scheme="https://www.ruusu.cn/tags/%E7%BD%91%E5%B7%A5%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>5-IP与路由</title>
-    <link href="https://www.ruusu.cn/2024/03/15/5-IP%E4%B8%8E%E8%B7%AF%E7%94%B1/"/>
-    <id>https://www.ruusu.cn/2024/03/15/5-IP%E4%B8%8E%E8%B7%AF%E7%94%B1/</id>
-    <published>2024-03-15T02:57:48.000Z</published>
-    <updated>2024-03-16T06:56:10.020Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="IP地址的分类和组成"><a href="#IP地址的分类和组成" class="headerlink" title="IP地址的分类和组成"></a>IP地址的分类和组成</h2><p>IP地址由网络号(ID)和主机号(ID)组成</p><p>（1）A类地址：最高位是0，随后的7位是网络地址，最后24位是主机地址。<br>（2）B类地址：最高2位分别是1和0，随后的14位是网络地址，最后16位是主机地址。<br>（3）C类地址：最高的3位是110，随后的21位是网络地址，最后8位是主机地址。<br>（4）D类地址：最高的4位是1110，随后的所有位用来做组播地址。<br>（5）E类地址：最高的5位是11110，这类地址为保留地址，不使用。</p><table><thead><tr><th align="center">类别</th><th align="center">第一个字节的格式</th><th align="center">网络数</th><th align="center">每个网络容纳的主机数</th><th align="center">分辨方法(首字节范围)</th></tr></thead><tbody><tr><td align="center">A</td><td align="center">0xxxxxxx</td><td align="center">126</td><td align="center">16777214</td><td align="center">1~126</td></tr><tr><td align="center">B</td><td align="center">10xxxxxx</td><td align="center">16384</td><td align="center">65534</td><td align="center">128~191</td></tr><tr><td align="center">C</td><td align="center">110xxxxx</td><td align="center">2097152</td><td align="center">254</td><td align="center">192~223</td></tr></tbody></table><h2 id="子网划分方法"><a href="#子网划分方法" class="headerlink" title="子网划分方法"></a>子网划分方法</h2><p>固定长度子网划分可变长度子网划分(从大到小划分)子网划分为等大小的子网按地理位置进行子网划分按具体的功能或部分进行子网划分</p><h2 id="子网掩码的含义及表示方式"><a href="#子网掩码的含义及表示方式" class="headerlink" title="子网掩码的含义及表示方式"></a>子网掩码的含义及表示方式</h2><p>子网掩码是一种用于区分IP地址中的网络部分和主机部分的32位二进制数。</p><p>两种表示方式一种是点分十进制(255.255.255.0),另一种是用子网掩码中”1”的个数来标记(255.255.255.224)可以写作&#x2F;27 </p><h2 id="不同网段之间相互连通的方法"><a href="#不同网段之间相互连通的方法" class="headerlink" title="不同网段之间相互连通的方法"></a>不同网段之间相互连通的方法</h2><p>网关</p><h2 id="一个网段中有效-IP-地址的范围的计算"><a href="#一个网段中有效-IP-地址的范围的计算" class="headerlink" title="一个网段中有效 IP 地址的范围的计算"></a>一个网段中有效 IP 地址的范围的计算</h2><p>1：IP地址 &#x3D; 网络地址 + 主机地址，二进制为： 11000000 10101000 00001001 00000011 </p><p>2：子网掩码的二进制表示为： 11111111 11111111 11111110 00000000 解析：前面1的就是网络地址部分，后面0就是主机地址，所以此处有9位主机地址。 </p><p>3：网络地址 &#x3D; 子网掩码 &amp; IP地址，即：192.168.8.0 </p><p>4：广播地址 &#x3D; 3中求出的网络地址的主机地址部分置1，即：192.168.9.255 </p><p>5：有效的IP段计算： 开始地址 &#x3D; 网络地址+1，即192.168.8.1 结束地址 &#x3D; 广播地址-1，即192.168.9.254 那么当前示例的有效IP段为：192.168.8.1~192.168.9.254</p><h2 id="ARP-协议的作用"><a href="#ARP-协议的作用" class="headerlink" title="ARP 协议的作用"></a>ARP 协议的作用</h2><p>1.局域网内实现地址解析</p><p>2.跨网络实现地址解析</p><h2 id="路由的作用"><a href="#路由的作用" class="headerlink" title="路由的作用"></a>路由的作用</h2><p>选路与传输信息 也叫(数据)交换</p><h2 id="自治系统的含义"><a href="#自治系统的含义" class="headerlink" title="自治系统的含义"></a>自治系统的含义</h2><p>自治系统(Autonomous System,AS)指的是由单一实体进行控制和管理的路由器集合,自治系统通常又称为域。</p><h2 id="RIP-协议的工作原理及更新过程"><a href="#RIP-协议的工作原理及更新过程" class="headerlink" title="RIP 协议的工作原理及更新过程"></a>RIP 协议的工作原理及更新过程</h2><p>基本原理：相邻路由器之间互相交换整个路由表</p><p>更新过程</p><ol><li><p>触发事件：当网络中的一个路由器或链路发生变化时，例如路由器故障、链路断开或新的链路建立，触发更新事件。</p></li><li><p>发送更新消息：受影响的路由器将通过广播或多播方式发送更新消息给相邻的路由器。该消息包含被改变的目标网络及其相关信息。</p></li><li><p>距离计算：接收到更新消息的邻居节点会根据接收到的信息和自身已知网络拓扑，重新计算到达目标网络的距离。这个距离可能是根据Hop数、Metric值等来衡量。</p></li><li><p>更新转发表：基于重新计算得出的最短路径，邻居节点会相应地更新自己的转发表，以反映新的可达性情况。这样可以确保数据包能够按照最优路径进行转发。</p></li><li><p>向外传播：更新后的转发表信息将继续向其他邻居节点传播，以便整个网络中所有节点都能获得最新的网络拓扑信息。</p></li><li><p>收敛稳定：经过一系列的更新和转发过程后，当网络中的所有路由器都收敛到一个一致的拓扑状态时，RIP协议达到了稳定状态。</p><blockquote><pre><code>   1. 路由器之间交换路由表信息。当一个路由器加入网络或者网络拓扑发生变化时，它会向相邻的路由器发送更新信息。这些更新信息包括路由器的IP地址、目标网络的IP地址、距离和下一跳路由器的IP地址。   2. 计算最短路径。当一个路由器收到更新信息时，它会将这些信息添加到它的路由表中，并根据距离向量算法计算到达目标网络的最短路径。最短路径是指从当前路由器到达目标网络所需的跳数。   3. 更新路由表。如果一个路由器发现到达目标网络的路径有改变，它会更新自己的路由表，并将这些信息发送给相邻的路由器。这样，整个网络中的路由器都会更新自己的路由表，以反映最新的网络拓扑。   4. 定期更新路由表信息。RIP协议会定期发送路由表信息，以确保整个网络中的路由器都有最新的路由表信息。默认情况下，RIP协议每30秒发送一次更新信息。</code></pre></blockquote></li></ol><h2 id="OSPF-协议的工作过程"><a href="#OSPF-协议的工作过程" class="headerlink" title="OSPF 协议的工作过程"></a>OSPF 协议的工作过程</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">graph LR;</span><br><span class="line">寻找邻居--&gt;邻接关系的建立--&gt;链路状态信息传递--&gt;路由计算</span><br></pre></td></tr></table></figure><h2 id="IPv6-地址的地址表示"><a href="#IPv6-地址的地址表示" class="headerlink" title="IPv6 地址的地址表示"></a>IPv6 地址的地址表示</h2><p>1.首选格式</p><p>X:X:X:X:X:X:X:X(一个X表示一个4位的十六进制数)</p><p>可以将每一段中的前导零省去，但是必须保证每段有一个数字</p><p>例如2001:0410:0000:0001:0000:0000:0000:45FF</p><p>2001:410:0:1:0:0:0:45FF</p><p>2.压缩格式</p><p>当一个或多个连续的段内各位全为0时可以使用::(双冒号)来表示,但一个地址中只能使用一次::</p><p>例如2001:410:0:1:0:0:0:45FF</p><p>2001:410:0:1::45FF<font color="grenn">√</font></p><p>2001:410::1:45FF:x:</p><p>3.内嵌IPv4地址的IPv6地址</p><p>X:X:X:X:X:X:d.d.d.d(d表示IPv4地址中的一个十进制数)</p><p>IPv4兼容IPv6地址:::d.d.d.d</p><p>IPv4映射IPv6地址:::FFFF:d.d.d.d</p><p>IPv6前缀长度类似IPv4网络ID地址&#x2F;前缀长度2001::1&#x2F;64</p><p>4.对于URL地址IPv6地址需要使用”[]”括起来,例如https:&#x2F;&#x2F;[2606:50c0:8001::153]</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;IP地址的分类和组成&quot;&gt;&lt;a href=&quot;#IP地址的分类和组成&quot; class=&quot;headerlink&quot; title=&quot;IP地址的分类和组成&quot;&gt;&lt;/a&gt;IP地址的分类和组成&lt;/h2&gt;&lt;p&gt;IP地址由网络号(ID)和主机号(ID)组成&lt;/p&gt;
-&lt;p&gt;（1）A类地址：</summary>
       
     
     
