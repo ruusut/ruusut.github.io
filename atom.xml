@@ -6,7 +6,7 @@
   <link href="https://www.ruusu.cn/atom.xml" rel="self"/>
   
   <link href="https://www.ruusu.cn/"/>
-  <updated>2024-03-17T05:59:52.614Z</updated>
+  <updated>2024-03-18T04:56:33.257Z</updated>
   <id>https://www.ruusu.cn/</id>
   
   <author>
@@ -17,11 +17,101 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>10-网络安全</title>
+    <link href="https://www.ruusu.cn/2024/03/15/10-%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
+    <id>https://www.ruusu.cn/2024/03/15/10-%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</id>
+    <published>2024-03-15T07:57:48.000Z</published>
+    <updated>2024-03-18T04:56:33.257Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="网络安全的定义"><a href="#网络安全的定义" class="headerlink" title="网络安全的定义"></a>网络安全的定义</h2><p>网络安全是指网络系统硬件、软件及其系统中的数据受到保护，不受偶然的或恶意的原因而遭到破坏、更改、泄露，保证系统连续、可靠、正常地运行，网络服务不中断。</p><p>网络安全从本来说就是网络上的信息安全。从广义角度来说，凡是涉及网络上信息的保密性、完整性、可用性、真实性和可控性的相关技术和理论都是网络安全的研究领域。</p><h2 id="网络面临的安全威胁"><a href="#网络面临的安全威胁" class="headerlink" title="网络面临的安全威胁"></a>网络面临的安全威胁</h2><p><strong>(1)截获</strong>攻击者从网络上窃听他人的通信内容。</p><p><strong>(2)中断</strong>攻击者有意中断他人在网络上的通信。</p><p><strong>(3)篡改</strong>攻击者故意篡改网络上传送的报文。</p><p><strong>(4)伪造</strong>攻击者伪造信息在网络上传送。</p><h2 id="网络安全的目标"><a href="#网络安全的目标" class="headerlink" title="网络安全的目标"></a>网络安全的目标</h2><p><strong>机密性</strong></p><p><strong>完整性</strong></p><p><strong>可用性</strong></p><p><strong>可控性</strong></p><p><strong>不可否认性</strong></p><h2 id="Dos攻击的含义"><a href="#Dos攻击的含义" class="headerlink" title="Dos攻击的含义"></a>Dos攻击的含义</h2><p>DOS攻击,全称为Denial of Service(拒绝服务)攻击,是一种网络攻击手段,它通过大量的无效请求,使得目标服务器的资源耗尽,无法提供正常的服务,从而实现攻击的目的。</p><h2 id="防火墙的作用"><a href="#防火墙的作用" class="headerlink" title="防火墙的作用"></a>防火墙的作用</h2><p>(1)检查所有从外部网络进入内部网络的数据包</p><p>(2)检查所有从内部网络流进外部网络的数据包</p><p>(3)执行安全策略,限制所有不符合安全策略要求的分组通过</p><p>(4)具有防攻击能力,可保证自身安全</p><h2 id="网络安全涉及的技术有哪些"><a href="#网络安全涉及的技术有哪些" class="headerlink" title="网络安全涉及的技术有哪些"></a>网络安全涉及的技术有哪些</h2><p><strong>(1)网络扫描</strong></p><p><strong>(2)网络监听</strong></p><p><strong>(3)木马</strong></p><p><strong>(4)Dos攻击</strong></p><p><strong>(5)网络防病毒技术</strong></p><p><strong>(6)加密解密技术</strong></p><p><strong>(7)防火墙技术</strong></p><h2 id="对称密码和非对称密码的区别"><a href="#对称密码和非对称密码的区别" class="headerlink" title="对称密码和非对称密码的区别"></a>对称密码和非对称密码的区别</h2><p>1.对称加密中加密和解密使用的秘钥是同一个;非对称加密中采用两个密钥，一般使用公钥进行加密，私钥进行解密。</p><p>2.对称加密解密的速度比较快，非对称加密和解密花费的时间长、速度相对较慢。</p><p>3.对称加密的安全性相对较低，非对称加密的安全性较高。</p><h2 id="防火墙的技术分类"><a href="#防火墙的技术分类" class="headerlink" title="防火墙的技术分类"></a>防火墙的技术分类</h2><p><strong>(1)包过滤技术</strong>包过滤防火墙工作在网络层。对数据包的源及目的卫地址具有识别和控制作用，对于传输层，也只能识别数据包是TCP 还是 UDP 及所用的端口信息。现在的路由器、具有路由功能的交换机以及一些操作系统已经具有包过滤控制的能力。由于只用对数据包的 IP 地址、TCP&#x2F;UDP 和端口进行分析,包过滤防火墙的处理速度较快，并且易于配置。但包过滤防火墙不能防范黑客攻击，不支持应用层协议，不能处理新的安全威胁。</p><p><strong>(2)应用代理网关技术</strong>应用代理网关防火墙能彻底隔断内网与外网的直接通信。内网用户对外网的访问变成防火墙对外网的访问，然后由防火墙转发给内网用户。所有通信都必须经应用层代理软件转发，访问者任何时候都不能与服务器建立直接的TCP连接，应用层的协议会话过程必须符合代理的安全策略要求。应用代理网关防火墙的优点是可以检查应用层、传输层和网络层的协议特征，对数据包的检测能力比较强。</p><p><strong>(3)状态检测技术</strong>状态检测防火墙摒弃了包过滤防火墙仅考查数据包的IP地址等几个参数，不关心数据包连接状态变化的特点，而在防火墙的核心部分建立状态连接表，并将进出网络的数据当成一个个的会话，利用状态表跟踪每一个会话状态。状态监测对每一个包的检查不仅根据规则表，更考虑了数据包是否符合会话所处的状态，因此提供了完整的对传输层的控制能力。<br>状态检测防火墙的一个挑战就是处理流量，状态检测技术在提高安全防范能力的同时也改进了流量处理速度。几乎任何一款高性能的防火墙，都会采用状态检测技术。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;网络安全的定义&quot;&gt;&lt;a href=&quot;#网络安全的定义&quot; class=&quot;headerlink&quot; title=&quot;网络安全的定义&quot;&gt;&lt;/a&gt;网络安全的定义&lt;/h2&gt;&lt;p&gt;网络安全是指网络系统硬件、软件及其系统中的数据受到保护，不受偶然的或恶意的原因而遭到破坏、更改、泄露</summary>
+      
+    
+    
+    
+    
+    <category term="网工学习" scheme="https://www.ruusu.cn/tags/%E7%BD%91%E5%B7%A5%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>9-无线局域网技术</title>
+    <link href="https://www.ruusu.cn/2024/03/15/9-%E6%97%A0%E7%BA%BF%E5%B1%80%E5%9F%9F%E7%BD%91%E6%8A%80%E6%9C%AF/"/>
+    <id>https://www.ruusu.cn/2024/03/15/9-%E6%97%A0%E7%BA%BF%E5%B1%80%E5%9F%9F%E7%BD%91%E6%8A%80%E6%9C%AF/</id>
+    <published>2024-03-15T06:57:48.000Z</published>
+    <updated>2024-03-18T04:56:22.320Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="WLAN-的概念"><a href="#WLAN-的概念" class="headerlink" title="WLAN 的概念"></a>WLAN 的概念</h2><p>WLAN是利用无线通信技术在一定的局部范围内建立的网络，是计算机与无线通信技术结合的产物。它以无线多址信道作为传输介质，提供传统有线局域网的功能，使用户能够真正地随时、随地、随意的宽带网络接入。</p><h2 id="WLAN的标准"><a href="#WLAN的标准" class="headerlink" title="WLAN的标准"></a>WLAN的标准</h2><p>IEEE802.11100Mbit&#x2F;s&#x3D;12.5Mb&#x2F;s÷8</p><p>IEEE802.11b频段2.4000Ghz~2.4835Ghz传输速率11Mbit&#x2F;s范围室外300m办公环境最长100m</p><p>IEEE802.11a频段5.15Ghz<del>5.825Ghz传输速率54Mbit&#x2F;s传输距离10</del>100m</p><p>IEEE802.11gIEEE802.11a和IEEE802.11b的融合体</p><p>IEEE802.11nIEEE802.11g升级版300Mbit&#x2F;s</p><p>IEEE802.11ac5Ghz 最少1Gbit&#x2F;s速率2.4Ghz最高300Mbps&#x2F;s</p><h2 id="常见的WLAN设备"><a href="#常见的WLAN设备" class="headerlink" title="常见的WLAN设备"></a>常见的WLAN设备</h2><p>无线网卡无线天线无线AP无线网桥无线路由器</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;WLAN-的概念&quot;&gt;&lt;a href=&quot;#WLAN-的概念&quot; class=&quot;headerlink&quot; title=&quot;WLAN 的概念&quot;&gt;&lt;/a&gt;WLAN 的概念&lt;/h2&gt;&lt;p&gt;WLAN是利用无线通信技术在一定的局部范围内建立的网络，是计算机与无线通信技术结合的产物。它</summary>
+      
+    
+    
+    
+    
+    <category term="网工学习" scheme="https://www.ruusu.cn/tags/%E7%BD%91%E5%B7%A5%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>8-计算机网络应用</title>
+    <link href="https://www.ruusu.cn/2024/03/15/8-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/"/>
+    <id>https://www.ruusu.cn/2024/03/15/8-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8/</id>
+    <published>2024-03-15T05:57:48.000Z</published>
+    <updated>2024-03-18T04:55:29.753Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="DNS服务"><a href="#DNS服务" class="headerlink" title="DNS服务"></a>DNS服务</h2><p>将域名转换为对应的IP地址的过程称为域名解析，DNS服务能够把域名解析为IP地址。</p><h2 id="WWW服务"><a href="#WWW服务" class="headerlink" title="WWW服务"></a>WWW服务</h2><p>WWW服务是一个分布式的超媒体系统，是超文本结构与多媒体的结合体，包括图形、图像、声音、动画等信息</p><p>WWW系统由Web服务器、浏览器及通信协议3部分组成。</p><h2 id="电子邮件服务"><a href="#电子邮件服务" class="headerlink" title="电子邮件服务"></a>电子邮件服务</h2><p>是一种电子手段提供信息交换的通信方式，是Internet上使用最广泛的服务之一。</p><p>电子邮件系统中由两个重要的协议</p><p><mark>简单邮件传输协议(SMTP)</mark><strong>用户发送邮件及邮件服务器之间传递邮件</strong></p><p><mark>邮局协议(POP3)</mark><strong>从邮件服务器下载邮件</strong></p><h2 id="FTP-服务常用的-Internet-服务的含义及基本原理"><a href="#FTP-服务常用的-Internet-服务的含义及基本原理" class="headerlink" title="FTP 服务常用的 Internet 服务的含义及基本原理"></a>FTP 服务常用的 Internet 服务的含义及基本原理</h2><p>FTP（File Transfer Protocol，文件传输协议）是TCP&#x2F;IP网络上两台计算机之间文件传输的协议。</p><p>再进行文件传输时，客户端与FTP服务器之间需要建立两个连接：**一是TCP数据连接,**用于传送数据;**二是控制连接,**用于传送控制信息(命令和响应)。</p><p>FTP进行文件传输时,需要客户端和服务器之间建立两个TCP连接:<strong>TCP控制连接和TCP数据连接。</strong><mark>FTP控制连接主要用来传输客户端和服务器之间的FTP命令以及命令的响应,控制连接在整个会话期间一直保持打开。</mark><mark>FTP数据连接用来传输文件数据。服务器的控制进程在接收到FTP客户端发送来的文件传输请求后，就创建数据连接，在传输完毕后关闭数据连接并结束运行。</mark></p><h2 id="常见的-Internet-接入方式"><a href="#常见的-Internet-接入方式" class="headerlink" title="常见的 Internet 接入方式"></a>常见的 Internet 接入方式</h2><p><strong>有线传输接入:</strong><mark>PSTN的拨号接入方式</mark><mark>xDSL(x数字用户线)接入</mark><mark>HFC(混合光纤同轴电缆)接入</mark><mark>光纤接入网等</mark></p><p><strong>无线传输接入:</strong><mark>无线宽带接入技术</mark><mark>Wi-Fi</mark><mark>蓝牙</mark></p><h2 id="域名的结构"><a href="#域名的结构" class="headerlink" title="域名的结构"></a>域名的结构</h2><p>域名由“根（.）+顶级域名+二级域名+三级域名或主机+……”构成。</p><p>根域名、顶级域名、二级域名、三级域名、四级域名等</p><p>每一级域名之间用.分隔,等级最低的域名写在最左边,等级最高的根域名写在最右面</p><p>例如<a href="http://www.baidu.com/">www.baidu.com</a>com是顶级域名baidu是二级域名www是二级域名中的主机名也叫三级域名</p><h2 id=""><a href="#" class="headerlink" title=""></a></h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;DNS服务&quot;&gt;&lt;a href=&quot;#DNS服务&quot; class=&quot;headerlink&quot; title=&quot;DNS服务&quot;&gt;&lt;/a&gt;DNS服务&lt;/h2&gt;&lt;p&gt;将域名转换为对应的IP地址的过程称为域名解析，DNS服务能够把域名解析为IP地址。&lt;/p&gt;
+&lt;h2 id=&quot;WWW服</summary>
+      
+    
+    
+    
+    
+    <category term="网工学习" scheme="https://www.ruusu.cn/tags/%E7%BD%91%E5%B7%A5%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>7-交换式以太网技术</title>
+    <link href="https://www.ruusu.cn/2024/03/15/7-%E4%BA%A4%E6%8D%A2%E5%BC%8F%E4%BB%A5%E5%A4%AA%E7%BD%91%E6%8A%80%E6%9C%AF/"/>
+    <id>https://www.ruusu.cn/2024/03/15/7-%E4%BA%A4%E6%8D%A2%E5%BC%8F%E4%BB%A5%E5%A4%AA%E7%BD%91%E6%8A%80%E6%9C%AF/</id>
+    <published>2024-03-15T04:57:48.000Z</published>
+    <updated>2024-03-18T04:55:04.500Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="交换机的转发方式"><a href="#交换机的转发方式" class="headerlink" title="交换机的转发方式"></a>交换机的转发方式</h2><p><strong>(1)存储转发方式</strong></p><p><strong>(2)直接交换方式</strong></p><p><strong>(3)改进的直接交换方式</strong></p><h2 id="交换机的工作原理"><a href="#交换机的工作原理" class="headerlink" title="交换机的工作原理"></a>交换机的工作原理</h2><p>当交换机从某个端口收到一个数据包，它先读取包头中的源MAC地址，这样它就知道源MAC地址的机器是连在哪个端口上的；再去读取包头中的目的MAC地址，并在地址表中查找相应的端口；如表中有与这目的MAC地址对应的端口，把数据包直接复制到这端口上；如表中找不到相应的端口则把数据包广播到所有端口上，当目的机器对源机器回应时，交换机又可以学习一目的MAC地址与哪个端口对应，在下次传送数据时就不再需要对所有端口进行广播了。</p><h2 id="VLAN的特点"><a href="#VLAN的特点" class="headerlink" title="VLAN的特点"></a>VLAN的特点</h2><p><strong>(1)增强网络管理</strong></p><p><strong>(2)控制广播风暴</strong></p><p><strong>(3)提高网络的安全性</strong></p><h2 id="VLAN的划分方法"><a href="#VLAN的划分方法" class="headerlink" title="VLAN的划分方法"></a>VLAN的划分方法</h2><p><strong>(1)按交换机端口划分</strong></p><p><strong>(2)按MAC地址划分</strong></p><p><strong>(3)按网络层地址划分</strong></p><p><strong>(4)按网络层协议划分</strong></p><p><strong>(5)按策略划分</strong></p><h2 id="生成协议书的作用"><a href="#生成协议书的作用" class="headerlink" title="生成协议书的作用"></a>生成协议书的作用</h2><p><strong>预防网络中的环路问题</strong></p><h2 id="干道的作用"><a href="#干道的作用" class="headerlink" title="干道的作用"></a>干道的作用</h2><p><strong>VLAN干道的主要作用是实现不同VLAN之间的通信</strong></p><h2 id="链路聚合具有的优点"><a href="#链路聚合具有的优点" class="headerlink" title="链路聚合具有的优点"></a>链路聚合具有的优点</h2><p><strong>(1)提高链路带宽</strong></p><p><strong>(2)增强链路可靠性</strong></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;交换机的转发方式&quot;&gt;&lt;a href=&quot;#交换机的转发方式&quot; class=&quot;headerlink&quot; title=&quot;交换机的转发方式&quot;&gt;&lt;/a&gt;交换机的转发方式&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;(1)存储转发方式&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;(2)直</summary>
+      
+    
+    
+    
+    
+    <category term="网工学习" scheme="https://www.ruusu.cn/tags/%E7%BD%91%E5%B7%A5%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>6-传输层协议原理及技术</title>
     <link href="https://www.ruusu.cn/2024/03/15/6-%E4%BC%A0%E8%BE%93%E5%B1%82%E5%8D%8F%E8%AE%AE%E5%8E%9F%E7%90%86%E4%B8%8E%E6%8A%80%E6%9C%AF/"/>
     <id>https://www.ruusu.cn/2024/03/15/6-%E4%BC%A0%E8%BE%93%E5%B1%82%E5%8D%8F%E8%AE%AE%E5%8E%9F%E7%90%86%E4%B8%8E%E6%8A%80%E6%9C%AF/</id>
     <published>2024-03-15T03:57:48.000Z</published>
-    <updated>2024-03-17T05:59:52.614Z</updated>
+    <updated>2024-03-17T08:22:41.365Z</updated>
     
     <content type="html"><![CDATA[<h2 id="TCP的含义"><a href="#TCP的含义" class="headerlink" title="TCP的含义"></a>TCP的含义</h2><p>TCP是一个提供面向连接、可靠服务的网络通信协议</p><h2 id="UDP的含义"><a href="#UDP的含义" class="headerlink" title="UDP的含义"></a>UDP的含义</h2><p>UDP是一个提供无连接、不可靠服务的用户数据报协议</p><h2 id="TCP-与-UDP-的区别"><a href="#TCP-与-UDP-的区别" class="headerlink" title="TCP 与 UDP 的区别"></a>TCP 与 UDP 的区别</h2><p><img src="https://www.ruusu.cn/2024/03/15/6-%E4%BC%A0%E8%BE%93%E5%B1%82%E5%8D%8F%E8%AE%AE%E5%8E%9F%E7%90%86%E4%B8%8E%E6%8A%80%E6%9C%AF/TCP_UDP.png"></p><h2 id="TCP连接的建立"><a href="#TCP连接的建立" class="headerlink" title="TCP连接的建立"></a>TCP连接的建立</h2><p>TCP使用<mark>“三次握手”</mark>的方式来建议连接。</p><p>TCP的连接总共分为三个阶段，<mark>建立连接-&gt;数据传输-&gt;断开连接</mark>这三个阶段。</p><p>第一次握手：客户端发送SYN包（SYN&#x3D;1，ACK&#x3D;0）给服务器，请求建立连接。客户端随机选择一个初始序列号（ISN），用于后续通信的序列号计数。</p><p>第二次握手：服务器收到客户端的SYN包，如果同意建立连接，应该发送一个SYN+ACK包（SYN&#x3D;1，ACK&#x3D;1），其中SYN&#x3D;1表示确认客户端的SYN包，ACK&#x3D;1表示确认收到了客户端的序列号（即ISN+1），同时也随机选择一个序列号作为服务器的初始序列号。</p><p>第三次握手：客户端收到服务器的SYN+ACK包，向服务器发送一个ACK包（SYN&#x3D;0，ACK&#x3D;1），表示确认收到了服务器的SYN+ACK包，同时也确认服务器的序列号（即服务器的ISN+1）。</p><h2 id="TCP-连接的释放"><a href="#TCP-连接的释放" class="headerlink" title="TCP 连接的释放"></a>TCP 连接的释放</h2><p><mark>四次挥手</mark></p><p>（1）首先客户端向服务器发送一段<code>TCP</code>报文表明其想要释放<code>TCP</code>连接</p><p>（2）服务器接收到客户端请求断开连接的<code>FIN</code>报文后，结束<code>ESTABLISHED</code>阶段，进入<code>CLOSE-WAIT</code>阶段并返回一段<code>TCP</code>报文</p><p>（3）服务器端在发出<code>ACK</code>确认报文后，服务器端会将遗留的待传数据传送给客户端，待传输完成后即经过<code>CLOSE-WAIT</code>阶段，便做好了释放服务器端到客户端的连接准备，再次向客户端发出一段<code>TCP</code>报文</p><p>（4）客户端收到从服务器发来的<code>TCP</code>报文，确认了服务器已经做好释放连接的准备，于是进入<code>TIME-WAIT</code>阶段，并向服务器发送一段报文</p><p>主动释放的一方发送连接释放请求。（第一次挥手）</p><p>被动释放的一方收到主动释放发送的请求后，发送确认报文。（第二次挥手）</p><p>等待一段时间后，被动释放方再次发送连接释放请求报文。（第三次挥手）</p><p>主动释放方收到被动释放方的释放请求后发送确认报文。（第四次挥手）</p><h2 id="常见的拥塞控制的算法"><a href="#常见的拥塞控制的算法" class="headerlink" title="常见的拥塞控制的算法"></a>常见的拥塞控制的算法</h2><p><mark>慢启动拥塞避免快重传与快恢复</mark></p><h2 id="VPN-的含义"><a href="#VPN-的含义" class="headerlink" title="VPN 的含义"></a>VPN 的含义</h2><p>虚拟专用网(VPN),是利用公网Internet作为采用私有地址的专用通信的载体。它允许用户通过公共网络（如互联网）建立一个安全、加密的连接</p><h2 id="VPN的分类"><a href="#VPN的分类" class="headerlink" title="VPN的分类"></a>VPN的分类</h2><p>VPDNIntranet VPNExtranet VPN</p><h2 id="NAT-技术产生的原因"><a href="#NAT-技术产生的原因" class="headerlink" title="NAT 技术产生的原因"></a>NAT 技术产生的原因</h2><p>IPv4地址危机隐藏并保护网络内部的计算机</p><h2 id="NAT技术的类型有哪些"><a href="#NAT技术的类型有哪些" class="headerlink" title="NAT技术的类型有哪些"></a>NAT技术的类型有哪些</h2><ol><li><strong>静态NAT(Static NAT)</strong>:内部网络中的每个主机都被永久映射成外部网络中的某个合法的地址。</li><li><strong>动态地址NAT(Pooled NAT)</strong>:在外部网络中定义了一系列的合法地址,采用动态分配的方法映射到内部网络。</li><li><strong>网络地址端口转换NAPT(Port-Level NAT)</strong>:把内部地址映射到外部网络的一个IP地址的不同端口上。</li></ol>]]></content>
     
