@@ -6,7 +6,7 @@
   <link href="https://www.ruusu.cn/atom.xml" rel="self"/>
   
   <link href="https://www.ruusu.cn/"/>
-  <updated>2024-03-18T04:56:33.257Z</updated>
+  <updated>2024-03-19T10:52:17.757Z</updated>
   <id>https://www.ruusu.cn/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="https://www.ruusu.cn/2024/03/19/C%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E6%A6%82%E5%BF%B5%E3%80%81%E5%8F%91%E5%B1%95%E5%8F%8A%E5%85%B6%E7%89%B9%E7%82%B9/"/>
+    <id>https://www.ruusu.cn/2024/03/19/C%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E6%A6%82%E5%BF%B5%E3%80%81%E5%8F%91%E5%B1%95%E5%8F%8A%E5%85%B6%E7%89%B9%E7%82%B9/</id>
+    <published>2024-03-19T06:20:04.331Z</published>
+    <updated>2024-03-19T10:52:17.757Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="C语言程序设计概念、发展及其特点"><a href="#C语言程序设计概念、发展及其特点" class="headerlink" title="C语言程序设计概念、发展及其特点"></a>C语言程序设计概念、发展及其特点</h2><p>**概念:**C语言是目前极为流行的一种计算机程序设计语言，它具有高级语言的功能，由具有汇编语言的一些特性。</p><p>**发展:**第一个阶段是1972~1978年Dennis Ritchie和Ken Thompson<mark>(K&amp;R)</mark>开发了C语言的原型版。<br>第二个阶段是1983年美国国家标准学会(ANSI),制定了一套标准,称为ANSI C(标准C),称为各种C语言版本的基础。<br>第三个阶段20世纪80年代中期，出现了面向对象程序设计的概念，将面向对象的语言引入到c语言中,设计出了C++</p><p><strong>特点:</strong>(1)语言通用性高、易写易读(2)丰富的数据类型、众多的运算符(3)语言简练、紧凑，使用方便、灵活(4)可移植性好(5)语言功能丰富(6)高效性</p><h2 id="C-语言程序的结构"><a href="#C-语言程序的结构" class="headerlink" title="C 语言程序的结构"></a>C 语言程序的结构</h2><p>C程序是一种函数结构，一般由一个或多个函数组成，其中必有一个main()函数,称为主函数,程序的执行就是从这里开始的。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#include &quot;stdio.h&quot;</span><br><span class="line">void main()/*主函数*/</span><br><span class="line">&#123;</span><br><span class="line">printf(&quot;Hello,World!&quot;);/*在屏幕上输出Hello,World!*/</span><br><span class="line">return 0;/*表示程序正常退出*/</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="C程序的步骤与方法"><a href="#C程序的步骤与方法" class="headerlink" title="C程序的步骤与方法"></a>C程序的步骤与方法</h2><p><img src="/"></p><h2 id="算法的概念"><a href="#算法的概念" class="headerlink" title="算法的概念"></a>算法的概念</h2><p>对数据处理的描述，即算法。算法是为解决一个问题而采取的方法和步骤。</p><h2 id="算法的特性"><a href="#算法的特性" class="headerlink" title="算法的特性"></a>算法的特性</h2><p>**(1)有穷性:**一个算法应包含有限个操作步骤，不能是无限个。</p><p>**(2)确定性:**算法中的每一步步骤应当是确定的,而不应当是含糊的、模棱两可的，也就是要求必须有明确的含义，不允许存在二义性。</p><p>**(3)有效性:**有效性也叫可执行性。算法中描述的每一步操作都应该能有效地执行，并得到确定的结果</p><p>**(4)输入:**一个算法可以有0个或多个输入数据。</p><p>**(5)输出:**算法的目的是求解,而”解”要输出。所以，一个算法应该至少有一个输出或多个输出。</p><h2 id="算法的表示"><a href="#算法的表示" class="headerlink" title="算法的表示"></a>算法的表示</h2><p>**(1)用自然语言描述:**自然语言就是人们平常使用的语言，可以是中文、英文等。</p><p>**(2)用流程图描述:**流程图使用一组规定的图形符号、流程线和文字说明来表示各种操作、算法的方法，直观形象，易于理解。<br><img src="/"></p><p>**(3)用N-S结构结构图描述:**N-S结构图的目的是开发一种不破坏结构化基本构成元素的过程设计表示。<br><strong>①顺序结构</strong><strong>②选择结构(分支结构)</strong><strong>③循环结构(当型循环)(直到型循环)</strong></p><p><img src="/"><br>**(4)用伪代码描述:**伪代码是一种介于自然语言和程序设计语言之间的文字和符号，用来描述算法。</p><p><strong>(5)用程序设计语言描述</strong></p><h2 id="结构化程序设计方法"><a href="#结构化程序设计方法" class="headerlink" title="结构化程序设计方法"></a>结构化程序设计方法</h2><p>①程序的质量标准是”清晰第一，效率第一”。</p><p>②程序的设计采用”自顶向下，逐步求精，模块化设计，结构化编程的方法”。</p><p>③程序的结构仅由顺序、选择、循环3种基本结构组合、嵌套而成，且满足。</p><p>④程序的书写必须按照一定的规范和格式进行，不能随心所欲地拼凑。</p><p>⑤程序的设计风格要以好的可读性为标准，以使用程序的用户为核心，外观美观、结构流畅、语句简洁。</p><h2 id="数据的表现形式及其运算"><a href="#数据的表现形式及其运算" class="headerlink" title="数据的表现形式及其运算"></a>数据的表现形式及其运算</h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;C语言程序设计概念、发展及其特点&quot;&gt;&lt;a href=&quot;#C语言程序设计概念、发展及其特点&quot; class=&quot;headerlink&quot; title=&quot;C语言程序设计概念、发展及其特点&quot;&gt;&lt;/a&gt;C语言程序设计概念、发展及其特点&lt;/h2&gt;&lt;p&gt;**概念:**C语言是目前极</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>10-网络安全</title>
@@ -181,9 +201,9 @@
     <link href="https://www.ruusu.cn/2024/03/15/3-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/"/>
     <id>https://www.ruusu.cn/2024/03/15/3-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/</id>
     <published>2024-03-15T00:57:48.000Z</published>
-    <updated>2024-03-16T07:01:39.267Z</updated>
+    <updated>2024-03-22T03:30:12.371Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="常见的标准化组织和机构"><a href="#常见的标准化组织和机构" class="headerlink" title="常见的标准化组织和机构"></a>常见的标准化组织和机构</h2><p>1.国际标准化组织(ISO)</p><p>2.电气与电子工程师协会(IEEE)</p><p>3.国际电信联盟(ITU)</p><p>4.电子工业协会(EIA)</p><p>5.美国国家标准协会(ANSI)</p><h2 id="协议的概念及组成"><a href="#协议的概念及组成" class="headerlink" title="协议的概念及组成"></a>协议的概念及组成</h2><p>协议是通信双方为实现通信而设计的约定或对话规则</p><p>网络协议主要由语义、语法和定时关系3个要素组成</p><h2 id="OSI参考模型-★"><a href="#OSI参考模型-★" class="headerlink" title="OSI参考模型 ★"></a>OSI参考模型 ★</h2><p><img src="https://www.ruusu.cn/2024/03/15/3-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/OSI.png"></p><p>（1）物理层。物理层（Physical Layer）是OSI参考模型的最低层，其主要功能是利用传输介质为通信的网络节点之间建立、管理和释放物理连接，实现比特流的传输，为数据链路层提供数据传输服务。物理层的数据传输单元是比特，或称为位。</p><p>（2）数据链路层。数据链路层（Data Link Layer）是参考模型的第二层，其主要功能是在物理层提供服务的基础上，在通信实体间建立和维护数据链路连接，传输以帧为单位的数据，并通过差错控制、流量控制等实现点到点的无差错的数据传输。</p><p>（3）网络层。网络层（Network Layer）是参考模型的第三层，其主要功能是实现在通信子网内源节点到目的节点分组的传送。其基本内容包括路由选择、拥塞控制和网络互联等，是网络体系结构中核心的一层，传输的基本单元为分组或数据包。</p><p>（4）传输层。传输层（Transport Layer）是参考模型的第四层，其主要功能是向用户提供可靠的端到端的数据传送。它屏蔽了下层数据传送的细节，是网络体系结构中关键的一层，传输的基本单元为数据报文或数据段。</p><p>（5）会话层。会话层（Session Layer）是参考模型的第五层，其主要功能是负责建立和维护两个节点间的会话连接和数据交换。传输的基本单元也叫报文，但它与传输层的报文有本质上的不同。</p><p>（6）表示层。表示层（Presentation Layer）是参考模型的第六层，其主要功能是负责有关数据表示的问题，主要包括数据格式的转换、数据加密和解密、数据压缩与恢复等功能。传输的基本单元为报文。</p><p>（7）应用层。应用层（Application Layer）是参考模型的最高层，也是最靠近用户的一层，其主要功能是为用户的应用程序提供网络服务和作为用户使用网络功能的接口。传输的基本单元为报文。</p><p><img src="https://www.ruusu.cn/2024/03/15/3-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/1710484723460.jpg"></p><h2 id="TCP-IP体系协议"><a href="#TCP-IP体系协议" class="headerlink" title="TCP&#x2F;IP体系协议"></a>TCP&#x2F;IP体系协议</h2><p><img src="https://www.ruusu.cn/2024/03/15/3-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/TCP_IP.jpg"></p><p>TCP&#x2F;IP特点</p><p>（1）开放的协议标准。可以免费使用，并且独立于特定的计算机硬件与操作系统。</p><p>（2）统一分配网络地址。使整个TCP&#x2F;IP设备在网络中具有唯一的I地址。</p><p>（3）适用性强。可同时适用于局域网、广域网及互联网。</p><p>（4）标准化的高层协议。可为用户提供多种可靠的网络服务。</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="常见的标准化组织和机构"><a href="#常见的标准化组织和机构" class="headerlink" title="常见的标准化组织和机构"></a>常见的标准化组织和机构</h2><p>1.国际标准化组织(ISO)</p><p>2.电气与电子工程师协会(IEEE)</p><p>3.国际电信联盟(ITU)</p><p>4.电子工业协会(EIA)</p><p>5.美国国家标准协会(ANSI)</p><h2 id="协议的概念及组成"><a href="#协议的概念及组成" class="headerlink" title="协议的概念及组成"></a>协议的概念及组成</h2><p>协议是通信双方为实现通信而设计的约定或对话规则</p><p>网络协议主要由语义、语法和定时关系3个要素组成</p><h2 id="OSI参考模型-★"><a href="#OSI参考模型-★" class="headerlink" title="OSI参考模型 ★"></a>OSI参考模型 ★</h2><p><img src="https://www.ruusu.cn/2024/03/15/3-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/OSI.png"></p><p>（1）物理层。物理层（Physical Layer）是OSI参考模型的最低层，<mark>其主要功能是利用传输介质为通信的网络节点之间建立、管理和释放物理连接，实现比特流的传输，为数据链路层提供数据传输服务</mark>。物理层的数据传输单元是比特，或称为位。</p><p>（2）数据链路层。数据链路层（Data Link Layer）是参考模型的第二层，<mark>其主要功能是在物理层提供服务的基础上，在通信实体间建立和维护数据链路连接，传输以帧为单位的数据，并通过差错控制、流量控制等实现点到点的无差错的数据传输。</mark></p><p>（3）网络层。网络层（Network Layer）是参考模型的第三层，<mark>其主要功能是实现在通信子网内源节点到目的节点分组的传送。</mark>其基本内容包括路由选择、拥塞控制和网络互联等，是网络体系结构中核心的一层，传输的基本单元为分组或数据包。</p><p>（4）传输层。传输层（Transport Layer）是参考模型的第四层，<mark>其主要功能是向用户提供可靠的端到端的数据传送。</mark>它屏蔽了下层数据传送的细节，是网络体系结构中关键的一层，传输的基本单元为数据报文或数据段。</p><p>（5）会话层。会话层（Session Layer）是参考模型的第五层，<mark>其主要功能是负责建立和维护两个节点间的会话连接和数据交换。</mark>传输的基本单元也叫报文，但它与传输层的报文有本质上的不同。</p><p>（6）表示层。表示层（Presentation Layer）是参考模型的第六层，<mark>其主要功能是负责有关数据表示的问题，主要包括数据格式的转换、数据加密和解密、数据压缩与恢复等功能。</mark>传输的基本单元为报文。</p><p>（7）应用层。应用层（Application Layer）是参考模型的最高层，也是最靠近用户的一层，<mark>其主要功能是为用户的应用程序提供网络服务和作为用户使用网络功能的接口。</mark>传输的基本单元为报文。</p><p><img src="https://www.ruusu.cn/2024/03/15/3-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/1710484723460.jpg"></p><h2 id="TCP-IP体系协议"><a href="#TCP-IP体系协议" class="headerlink" title="TCP&#x2F;IP体系协议"></a>TCP&#x2F;IP体系协议</h2><p><img src="https://www.ruusu.cn/2024/03/15/3-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/TCP_IP.jpg"></p><p>TCP&#x2F;IP特点</p><p>（1）开放的协议标准。可以免费使用，并且独立于特定的计算机硬件与操作系统。</p><p>（2）统一分配网络地址。使整个TCP&#x2F;IP设备在网络中具有唯一的I地址。</p><p>（3）适用性强。可同时适用于局域网、广域网及互联网。</p><p>（4）标准化的高层协议。可为用户提供多种可靠的网络服务。</p>]]></content>
     
     
       
